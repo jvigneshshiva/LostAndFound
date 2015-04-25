@@ -16,6 +16,9 @@
 		2F8DF41C1AEB9F8500F5C230 /* LostAndFoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF41B1AEB9F8500F5C230 /* LostAndFoundTests.m */; };
 		2F8DF42A1AEBA61200F5C230 /* LFPanoramaViewWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4271AEBA61200F5C230 /* LFPanoramaViewWidget.m */; };
 		2F8DF42B1AEBA61200F5C230 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4291AEBA61200F5C230 /* SwipeView.m */; };
+		2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF42D1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m */; };
+		2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */; };
+		2F8DF4351AEBBEB800F5C230 /* UIView+XIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4341AEBBEB800F5C230 /* UIView+XIB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,11 @@
 		2F8DF4271AEBA61200F5C230 /* LFPanoramaViewWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFPanoramaViewWidget.m; sourceTree = "<group>"; };
 		2F8DF4281AEBA61200F5C230 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		2F8DF4291AEBA61200F5C230 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		2F8DF42C1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFPanoramaViewWidgetPage.h; sourceTree = "<group>"; };
+		2F8DF42D1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFPanoramaViewWidgetPage.m; sourceTree = "<group>"; };
+		2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFPanoramaViewWidgetPage.xib; sourceTree = "<group>"; };
+		2F8DF4331AEBBEB800F5C230 /* UIView+XIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XIB.h"; sourceTree = "<group>"; };
+		2F8DF4341AEBBEB800F5C230 /* UIView+XIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XIB.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 		2F8DF3FE1AEB9F8400F5C230 /* LostAndFound */ = {
 			isa = PBXGroup;
 			children = (
+				2F8DF4321AEBBEAB00F5C230 /* Categories */,
+				2F8DF42F1AEBB8AB00F5C230 /* Xib */,
 				2F8DF4251AEBA61200F5C230 /* UIWidgets */,
 				2F8DF4031AEB9F8400F5C230 /* LFAppDelegate.h */,
 				2F8DF4041AEB9F8400F5C230 /* LFAppDelegate.m */,
@@ -133,8 +143,27 @@
 				2F8DF4271AEBA61200F5C230 /* LFPanoramaViewWidget.m */,
 				2F8DF4281AEBA61200F5C230 /* SwipeView.h */,
 				2F8DF4291AEBA61200F5C230 /* SwipeView.m */,
+				2F8DF42C1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.h */,
+				2F8DF42D1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m */,
 			);
 			path = UIWidgets;
+			sourceTree = "<group>";
+		};
+		2F8DF42F1AEBB8AB00F5C230 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		2F8DF4321AEBBEAB00F5C230 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2F8DF4331AEBBEB800F5C230 /* UIView+XIB.h */,
+				2F8DF4341AEBBEB800F5C230 /* UIView+XIB.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +248,7 @@
 			files = (
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
+				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
 				2F8DF40D1AEB9F8400F5C230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8DF4351AEBBEB800F5C230 /* UIView+XIB.m in Sources */,
 				2F8DF4081AEB9F8400F5C230 /* LFViewController.m in Sources */,
 				2F8DF42A1AEBA61200F5C230 /* LFPanoramaViewWidget.m in Sources */,
+				2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */,
 				2F8DF4051AEB9F8400F5C230 /* LFAppDelegate.m in Sources */,
 				2F8DF4021AEB9F8400F5C230 /* main.m in Sources */,
 				2F8DF42B1AEBA61200F5C230 /* SwipeView.m in Sources */,

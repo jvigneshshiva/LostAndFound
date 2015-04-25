@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8D3D6F13-C08B-440D-A2C7-25B1CEDACE33</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LostAndFound</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>305381E28DFD3CF3FFF792FF1692008A8D652710</key>
+		<string>https://github.com/jvigneshshiva/LostAndFound.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LostAndFound/LostAndFound.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>305381E28DFD3CF3FFF792FF1692008A8D652710</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jvigneshshiva/LostAndFound.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>305381E28DFD3CF3FFF792FF1692008A8D652710</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>305381E28DFD3CF3FFF792FF1692008A8D652710</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LostAndFound</string>
+		</dict>
+	</array>
+</dict>
+</plist>
