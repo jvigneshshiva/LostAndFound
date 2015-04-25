@@ -1,5 +1,5 @@
 //
-//  ItemsListPageView.h
+//  LFChatPageView.h
 //  LostAndFound
 //
 //  Created by Vignesh Shiva on 25/04/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ItemsListPageView : UIView
+@interface LFChatPageView : UIView
 
 @end

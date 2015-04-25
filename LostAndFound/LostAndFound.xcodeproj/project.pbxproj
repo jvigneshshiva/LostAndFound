@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F6BAD0B1AEBC439008A3784 /* ItemsListPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD0A1AEBC439008A3784 /* ItemsListPageView.m */; };
+		2F6BAD0B1AEBC439008A3784 /* LFItemsListPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD0A1AEBC439008A3784 /* LFItemsListPageView.m */; };
+		2F6BAD0E1AEBC51E008A3784 /* LFItemsListPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD0D1AEBC51E008A3784 /* LFItemsListPageView.xib */; };
+		2F6BAD111AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD101AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib */; };
+		2F6BAD141AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD131AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.m */; };
+		2F6BAD181AEBCDBF008A3784 /* LFMainPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD171AEBCDBF008A3784 /* LFMainPageView.m */; };
+		2F6BAD1B1AEBCDF3008A3784 /* LFMainPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD1A1AEBCDF3008A3784 /* LFMainPageView.xib */; };
+		2F6BAD211AEBE17D008A3784 /* LFChatPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD201AEBE17D008A3784 /* LFChatPageView.xib */; };
+		2F6BAD241AEBE21A008A3784 /* LFChatPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD231AEBE21A008A3784 /* LFChatPageView.m */; };
+		2F6BAD281AEBE2BA008A3784 /* LFChatPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD261AEBE2BA008A3784 /* LFChatPageTableViewCell.m */; };
+		2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD271AEBE2BA008A3784 /* LFChatPageTableViewCell.xib */; };
 		2F8DF4021AEB9F8400F5C230 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4011AEB9F8400F5C230 /* main.m */; };
 		2F8DF4051AEB9F8400F5C230 /* LFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4041AEB9F8400F5C230 /* LFAppDelegate.m */; };
 		2F8DF4081AEB9F8400F5C230 /* LFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4071AEB9F8400F5C230 /* LFViewController.m */; };
@@ -35,8 +44,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F6BAD091AEBC439008A3784 /* ItemsListPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsListPageView.h; sourceTree = "<group>"; };
-		2F6BAD0A1AEBC439008A3784 /* ItemsListPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsListPageView.m; sourceTree = "<group>"; };
+		2F6BAD091AEBC439008A3784 /* LFItemsListPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFItemsListPageView.h; sourceTree = "<group>"; };
+		2F6BAD0A1AEBC439008A3784 /* LFItemsListPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFItemsListPageView.m; sourceTree = "<group>"; };
+		2F6BAD0D1AEBC51E008A3784 /* LFItemsListPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFItemsListPageView.xib; sourceTree = "<group>"; };
+		2F6BAD101AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFItemsListPageViewTableViewCell.xib; sourceTree = "<group>"; };
+		2F6BAD121AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFItemsListPageViewTableViewCell.h; sourceTree = "<group>"; };
+		2F6BAD131AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFItemsListPageViewTableViewCell.m; sourceTree = "<group>"; };
+		2F6BAD161AEBCDBF008A3784 /* LFMainPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMainPageView.h; sourceTree = "<group>"; };
+		2F6BAD171AEBCDBF008A3784 /* LFMainPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMainPageView.m; sourceTree = "<group>"; };
+		2F6BAD1A1AEBCDF3008A3784 /* LFMainPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFMainPageView.xib; sourceTree = "<group>"; };
+		2F6BAD201AEBE17D008A3784 /* LFChatPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFChatPageView.xib; sourceTree = "<group>"; };
+		2F6BAD221AEBE21A008A3784 /* LFChatPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFChatPageView.h; sourceTree = "<group>"; };
+		2F6BAD231AEBE21A008A3784 /* LFChatPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFChatPageView.m; sourceTree = "<group>"; };
+		2F6BAD251AEBE2BA008A3784 /* LFChatPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFChatPageTableViewCell.h; sourceTree = "<group>"; };
+		2F6BAD261AEBE2BA008A3784 /* LFChatPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFChatPageTableViewCell.m; sourceTree = "<group>"; };
+		2F6BAD271AEBE2BA008A3784 /* LFChatPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LFChatPageTableViewCell.xib; path = ../../Classes/ChatPage/LFChatPageTableViewCell.xib; sourceTree = "<group>"; };
 		2F8DF3FC1AEB9F8400F5C230 /* LostAndFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostAndFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8DF4001AEB9F8400F5C230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8DF4011AEB9F8400F5C230 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +106,8 @@
 		2F6BAD071AEBC370008A3784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2F6BAD1D1AEBE145008A3784 /* ChatPage */,
+				2F6BAD151AEBCD9E008A3784 /* MainPage */,
 				2F6BAD081AEBC370008A3784 /* ItemsListPage */,
 			);
 			path = Classes;
@@ -92,10 +116,58 @@
 		2F6BAD081AEBC370008A3784 /* ItemsListPage */ = {
 			isa = PBXGroup;
 			children = (
-				2F6BAD091AEBC439008A3784 /* ItemsListPageView.h */,
-				2F6BAD0A1AEBC439008A3784 /* ItemsListPageView.m */,
+				2F6BAD091AEBC439008A3784 /* LFItemsListPageView.h */,
+				2F6BAD0A1AEBC439008A3784 /* LFItemsListPageView.m */,
+				2F6BAD121AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.h */,
+				2F6BAD131AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.m */,
 			);
 			path = ItemsListPage;
+			sourceTree = "<group>";
+		};
+		2F6BAD0C1AEBC510008A3784 /* ItemsListPage */ = {
+			isa = PBXGroup;
+			children = (
+				2F6BAD0D1AEBC51E008A3784 /* LFItemsListPageView.xib */,
+				2F6BAD101AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib */,
+			);
+			path = ItemsListPage;
+			sourceTree = "<group>";
+		};
+		2F6BAD151AEBCD9E008A3784 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				2F6BAD161AEBCDBF008A3784 /* LFMainPageView.h */,
+				2F6BAD171AEBCDBF008A3784 /* LFMainPageView.m */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		2F6BAD191AEBCDD9008A3784 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				2F6BAD1A1AEBCDF3008A3784 /* LFMainPageView.xib */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		2F6BAD1C1AEBE13A008A3784 /* ChatPage */ = {
+			isa = PBXGroup;
+			children = (
+				2F6BAD271AEBE2BA008A3784 /* LFChatPageTableViewCell.xib */,
+				2F6BAD201AEBE17D008A3784 /* LFChatPageView.xib */,
+			);
+			path = ChatPage;
+			sourceTree = "<group>";
+		};
+		2F6BAD1D1AEBE145008A3784 /* ChatPage */ = {
+			isa = PBXGroup;
+			children = (
+				2F6BAD221AEBE21A008A3784 /* LFChatPageView.h */,
+				2F6BAD231AEBE21A008A3784 /* LFChatPageView.m */,
+				2F6BAD251AEBE2BA008A3784 /* LFChatPageTableViewCell.h */,
+				2F6BAD261AEBE2BA008A3784 /* LFChatPageTableViewCell.m */,
+			);
+			path = ChatPage;
 			sourceTree = "<group>";
 		};
 		2F8DF3F31AEB9F8400F5C230 = {
@@ -179,6 +251,9 @@
 		2F8DF42F1AEBB8AB00F5C230 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				2F6BAD1C1AEBE13A008A3784 /* ChatPage */,
+				2F6BAD191AEBCDD9008A3784 /* MainPage */,
+				2F6BAD0C1AEBC510008A3784 /* ItemsListPage */,
 				2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */,
 			);
 			path = Xib;
@@ -273,11 +348,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6BAD111AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib in Resources */,
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
+				2F6BAD0E1AEBC51E008A3784 /* LFItemsListPageView.xib in Resources */,
+				2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
 				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
 				6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */,
 				6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */,
+				2F6BAD211AEBE17D008A3784 /* LFChatPageView.xib in Resources */,
+				2F6BAD1B1AEBCDF3008A3784 /* LFMainPageView.xib in Resources */,
 				2F8DF40D1AEB9F8400F5C230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,13 +376,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6BAD241AEBE21A008A3784 /* LFChatPageView.m in Sources */,
+				2F6BAD141AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.m in Sources */,
+				2F6BAD281AEBE2BA008A3784 /* LFChatPageTableViewCell.m in Sources */,
 				2F8DF4351AEBBEB800F5C230 /* UIView+XIB.m in Sources */,
 				2F8DF4081AEB9F8400F5C230 /* LFViewController.m in Sources */,
 				2F8DF42A1AEBA61200F5C230 /* LFPanoramaViewWidget.m in Sources */,
 				2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */,
-				2F6BAD0B1AEBC439008A3784 /* ItemsListPageView.m in Sources */,
+				2F6BAD0B1AEBC439008A3784 /* LFItemsListPageView.m in Sources */,
 				2F8DF4051AEB9F8400F5C230 /* LFAppDelegate.m in Sources */,
 				2F8DF4021AEB9F8400F5C230 /* main.m in Sources */,
+				2F6BAD181AEBCDBF008A3784 /* LFMainPageView.m in Sources */,
 				2F8DF42B1AEBA61200F5C230 /* SwipeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

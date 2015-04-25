@@ -7,6 +7,8 @@
 //
 
 #import "LFPanoramaViewWidgetPage.h"
+#import "UIView+XIB.h"
+
 
 @interface LFPanoramaViewWidgetPage()
 
@@ -23,7 +25,8 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        
+        [self addSubViewWithXibName:NSStringFromClass([self class]) andFrame:self.bounds];
+
     }
     return self;
 }
@@ -36,6 +39,11 @@
 -(void)addSubviewToDetailView:(UIView *)subview
 {
     [self.detailView addSubview:subview];
+}
+
+-(CGRect)detailViewBounds
+{
+    return self.detailView.bounds;
 }
 
 /*
