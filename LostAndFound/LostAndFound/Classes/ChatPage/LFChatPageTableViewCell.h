@@ -1,5 +1,5 @@
 //
-//  ItemsListPageView.h
+//  LFChatPageTableViewCell.h
 //  LostAndFound
 //
 //  Created by Vignesh Shiva on 25/04/15.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ItemsListPageView : UIView
+@interface LFChatPageTableViewCell : UITableViewCell
+
+-(void)configureCellWithDictionary:(NSDictionary *)dictionary;
+
 
 @end

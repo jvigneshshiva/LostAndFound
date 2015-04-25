@@ -7,6 +7,7 @@
 //
 
 #import "LFViewController.h"
+#import "LFMainPageView.h"
 
 @interface LFViewController ()
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    LFMainPageView *mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:mainPage];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -12,5 +12,7 @@
 
 -(void)setHeadingToView:(NSString *)heading;
 -(void)addSubviewToDetailView:(UIView *)subview;
+-(CGRect)detailViewBounds;
+
 
 @end
