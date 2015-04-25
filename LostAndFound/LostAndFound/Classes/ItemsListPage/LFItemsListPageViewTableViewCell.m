@@ -41,9 +41,6 @@
     self.headerLabel.text = headerString;
     
 }
-- (IBAction)contactButtonPressed
-{
-    [self.LFItemsListPageViewTableViewCellDelegate contactButtonPressedWithTag:(int)self.tag];
-}
+
 
 @end

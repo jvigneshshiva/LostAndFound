@@ -14,7 +14,7 @@
 
 #import "UIView+XIB.h"
 
-@interface LFMainPageView()
+@interface LFMainPageView()<LFChatPageViewProtocol>
 
 @property (weak, nonatomic) IBOutlet UIView *panoramaViewHolder;
 @property (weak, nonatomic) IBOutlet UIView *pageViewHolder;
@@ -56,14 +56,9 @@
 {
     self.pageOne = [[LFPanoramaViewWidgetPage alloc]initWithFrame:self.pageViewHolder.frame];
     [self.pageOne setHeadingToView:@"News"];
-    NSDictionary *itemDictionary = @{
-                                     @"name" : @"Vignesh",
-                                     @"itemStatus" : @"found",
-                                     @"itemName" : @"Ring",
-                                     @"location" : @"bangalore"
-                                     };
+    [self.mainPageViewDelegate fetchItemDataInfo];
     self.itemsListPageView = [[LFItemsListPageView alloc]initWithFrame:[self.pageOne detailViewBounds]];
-    [self.itemsListPageView  configureItemListWith:@[itemDictionary,itemDictionary,itemDictionary,itemDictionary,itemDictionary]];
+    [self.itemsListPageView  configureItemListWith:nil];
     [self.pageOne addSubviewToDetailView:self.itemsListPageView];
 }
 
@@ -71,20 +66,23 @@
 {
     self.pageTwo = [[LFPanoramaViewWidgetPage alloc]initWithFrame:self.pageViewHolder.frame];
     [self.pageTwo setHeadingToView:@"Chat"];
-    NSDictionary *chatMessage = @{
-                                     @"userName" : @"Vignesh",
-                                     @"message" : @"HIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIII",
-                                     @"hasUserSentThisMessage" : @(NO)
-                                     };
-    NSDictionary *chatMessage1 = @{
-                                  @"userName" : @"Shiva",
-                                  @"message" : @"HIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIII",
-                                  @"hasUserSentThisMessage" : @(YES)
-                                  };
     self.chatPageView = [[LFChatPageView alloc]initWithFrame:[self.pageOne detailViewBounds]];
-    [self.chatPageView  configureChatMessages:@[chatMessage,chatMessage1,chatMessage,chatMessage1,chatMessage]];
+    self.chatPageView.chatPageViewDelegate = self;
+    [self.chatPageView  configureChatMessages:nil];
     [self.pageTwo addSubviewToDetailView:self.chatPageView];
 }
+
+-(void)submitChatMessage:(NSString *)chatMessage
+{
+    [self.mainPageViewDelegate submitChatMessage:chatMessage];
+}
+
+-(void)chatSelectedWithUserId:(NSString *)userId
+{
+    [self.mainPageViewDelegate chatSelectedWithUserId:userId];
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

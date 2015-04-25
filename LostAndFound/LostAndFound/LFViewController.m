@@ -9,8 +9,11 @@
 #import "LFViewController.h"
 #import "LFMainPageView.h"
 #import "LFLoginPageView.h"
+#import "LFServerHelper.h"
 
-@interface LFViewController ()
+@interface LFViewController () <LFLoginPageViewProtocol>
+
+@property (nonatomic) LFServerHelper *serverHelper;
 
 @end
 
@@ -18,12 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.serverHelper = [LFServerHelper sharedServerHelper];
     [[UIApplication sharedApplication] setStatusBarHidden:YES
                                             withAnimation:UIStatusBarAnimationFade];
-//    LFMainPageView *mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
-//    [self.view addSubview:mainPage];
-    LFLoginPageView *logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
-    [self.view addSubview:logInPage];
+    
+    [self showLogInPage];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,5 +34,39 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)showLogInPage
+{
+    LFLoginPageView *logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
+    logInPage.loginPageViewDelegate = self;
+    [self.view addSubview:logInPage];
+}
+
+-(void)showMainPage
+{
+    LFMainPageView *mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:mainPage];
+}
+
+-(void)userDataSubmittedWithDictionary:(NSDictionary *)dictionary
+{
+    
+    NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"];
+    NSMutableDictionary *userDataDictionary = [dictionary mutableCopy];
+    userDataDictionary[@"phoneNumber"] = phoneNumber;
+
+}
+
+-(void)submitChatMessage:(NSString *)chatMessage
+{
+    
+}
+
+-(void)chatSelectedWithUserId:(NSString *)userId
+{
+    
+}
+
+
 
 @end

@@ -11,11 +11,11 @@
 
 @interface LFLoginPageView()<UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *fullNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSelection;
 
 @end
 
@@ -38,24 +38,30 @@
     if([self isFormComplete])
     {
         NSDictionary *dictionary = @{
-                                     @"fullName" : self.fullNameTextField.text,
-                                     @"userName" : self.userNameTextField.text,
-                                     @"email" : self.emailTextField.text
+                                     @"name" : self.fullNameTextField.text,
+                                     @"email" : self.emailTextField.text,
+                                     @"sex" : @(self.genderSelection.selectedSegmentIndex)
                                      };
+        [self.loginPageViewDelegate userDataSubmittedWithDictionary:dictionary];
     }
     else
     {
-        self.infoLabel.text = NSLocalizedString(@"Form Incomplete Text", @"Form Info Text");
+        self.infoLabel.text = NSLocalizedString(@"Form Incomplete", @"Form Info Text");
     }
 }
 
 -(BOOL)isFormComplete
 {
-    if(self.fullNameTextField.text && self.emailTextField.text && self.userNameTextField)
+    if([self.fullNameTextField.text isEqualToString:@""] || [self.emailTextField.text isEqualToString:@""])
     {
-        return YES;
+        return NO;
     }
-    return NO;
+    else if(self.fullNameTextField.text == nil || self.emailTextField.text == nil)
+    {
+        return NO;
+    }
+
+    return YES;
 }
 
 /*

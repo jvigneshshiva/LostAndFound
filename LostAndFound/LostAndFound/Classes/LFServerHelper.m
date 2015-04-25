@@ -7,7 +7,119 @@
 //
 
 #import "LFServerHelper.h"
+#import "ApURLConnection.h"
+
+typedef enum
+{
+    CHAT_GET_URL_CONNECTION_TAG,
+    CHAT_SEND_URL_CONNECTION_TAG,
+    ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG,
+    USERDATA_SUBMISSION_URL_CONNECTION_TAG,
+    TIME_FETCH_URL_CONNECTION_TAG
+}URL_CONNECTION_TYPE;
+
+#define CHAT_FETCH_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
+#define ITEM_LIST_DATA_FETCH @"https://dynamic-chiller-92609.appspot.com/hack?"
+#define TIME_FETCH_URL @""
+#define USERDATA_SUBMISSION_URL @""
 
 @implementation LFServerHelper
+
++(LFServerHelper *)sharedServerHelper
+{
+    static LFServerHelper * sharedInstance = nil;
+    if (sharedInstance == nil)
+    {
+        sharedInstance = [[LFServerHelper alloc]init];
+    }
+    return sharedInstance;
+}
+
+
+-(void)connectionSuccessful:(ApURLConnection *)apURLConnection withString:(NSString *)str withData:(NSData *)data
+{
+    switch (apURLConnection.tag) {
+        case CHAT_GET_URL_CONNECTION_TAG:
+            
+            break;
+            
+        case CHAT_SEND_URL_CONNECTION_TAG:
+            
+            break;
+            
+        case ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG:
+            
+            break;
+            
+        case USERDATA_SUBMISSION_URL_CONNECTION_TAG:
+            
+            break;
+            
+        case TIME_FETCH_URL_CONNECTION_TAG:
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+-(void)fetchChatData
+{
+    
+}
+
+-(void)submitUserDataWithDictionary:(NSDictionary *)dictionary
+{
+    
+    NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
+    [postParameter appendString:[NSString stringWithFormat:@"%@",@"userRegistration"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&name="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"name"]]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&email="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"email"]]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&phoneNumber="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"phoneNumber"]]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&sex="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"sex"]]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&imageURL="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"imageURL"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&pushNotificationId="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"xx"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&userOS="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"1"]];
+    ApURLConnection *userDataSubmissionURLConnection =[[ApURLConnection alloc]  initWithURL:USERDATA_SUBMISSION_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
+    userDataSubmissionURLConnection.tag = USERDATA_SUBMISSION_URL_CONNECTION_TAG;
+
+}
+
+-(void)fetchChatFromUser:(NSString *)senderID toUser:(NSString *)receiverID
+{
+    
+    NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"message"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"get"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&fromUserId="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", senderID]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&toUserId="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", receiverID]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&messageType="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"0"]];
+    ApURLConnection *fetchChatURLConnection =[[ApURLConnection alloc]  initWithURL:CHAT_FETCH_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
+    fetchChatURLConnection.tag = CHAT_GET_URL_CONNECTION_TAG;
+}
+
+-(void)fetchTime
+{
+    
+}
+
+
+-(void)connectionFailed:(ApURLConnection *)apURLconnection
+{
+    
+}
 
 @end

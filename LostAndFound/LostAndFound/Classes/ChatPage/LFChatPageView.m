@@ -12,10 +12,11 @@
 
 
 
-@interface LFChatPageView()<UITableViewDataSource,UITableViewDelegate>
+@interface LFChatPageView()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *chatMessagesTableView;
 @property (nonatomic) NSArray *chatMessagesArray;
+@property (weak, nonatomic) IBOutlet UITextField *chatTextField;
 
 @end
 
@@ -56,9 +57,27 @@
     [self.chatMessagesTableView reloadData];
 }
 
--(void)contactButtonPressedWithTag:(int)tag
+- (IBAction)sendButtonPressed
 {
+    if([self canChatMessageBeSent] == YES)
+    {
+        [self.chatPageViewDelegate submitChatMessage:self.chatTextField.text];
+    }
+
+}
+
+-(BOOL)canChatMessageBeSent
+{
+    if([self.chatTextField.text isEqualToString:@""])
+    {
+        return NO;
+    }
+    else if(self.chatTextField.text == nil)
+    {
+        return NO;
+    }
     
+    return YES;
 }
 
 

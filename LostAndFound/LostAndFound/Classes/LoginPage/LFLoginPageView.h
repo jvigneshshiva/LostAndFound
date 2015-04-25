@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LFLoginPageViewProtocol <NSObject>
+
+-(void)userDataSubmittedWithDictionary:(NSDictionary *)dictionary;
+
+@end
+
 @interface LFLoginPageView : UIView
+
+@property (nonatomic) id<LFLoginPageViewProtocol> loginPageViewDelegate;
 
 @end

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LFMainPageViewProtocol <NSObject>
+
+-(void)submitChatMessage:(NSString *)chatMessage;
+-(void)chatSelectedWithUserId:(NSString *)userId;
+-(void)fetchItemDataInfo;
+
+@end
+
 @interface LFMainPageView : UIView
+
+@property (nonatomic) id<LFMainPageViewProtocol> mainPageViewDelegate;
 
 @end

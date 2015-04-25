@@ -10,7 +10,6 @@
 
 @protocol LFItemsListPageViewTableViewCellProtocol <NSObject>
 
--(void)contactButtonPressedWithTag:(int)tag;
 
 @end
 

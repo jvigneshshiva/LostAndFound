@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LFChatPageViewProtocol <NSObject>
+
+-(void)submitChatMessage:(NSString *)chatMessage;
+
+@end
+
 @interface LFChatPageView : UIView
 
 -(void)configureChatMessages:(NSArray *)chatMessagesArray;
+@property (nonatomic) id<LFChatPageViewProtocol> chatPageViewDelegate;
 
 @end

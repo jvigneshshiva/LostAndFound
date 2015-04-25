@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LFItemsListPageViewProtocol <NSObject>
+
+-(void)chatSelectedWithUserId:(NSString *)userId;
+
+@end
+
 @interface LFItemsListPageView : UIView
 
 -(void)configureItemListWith:(NSArray *)itemListArray;
-
+@property (nonatomic) id<LFItemsListPageViewProtocol> itemsListPageViewDelegate;
 
 @end

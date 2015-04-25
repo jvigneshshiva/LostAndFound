@@ -55,11 +55,11 @@
     [self.itemsListTableView reloadData];
 }
 
--(void)contactButtonPressedWithTag:(int)tag
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    
+    NSDictionary *itemInfoDictionary = self.itemsListArray[indexPath.row];
+    [self.itemsListPageViewDelegate chatSelectedWithUserId:itemInfoDictionary[@"userId"]];
 }
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

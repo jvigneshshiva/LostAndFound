@@ -10,4 +10,13 @@
 
 @interface LFServerHelper : NSObject
 
++(LFServerHelper *)sharedServerHelper;
+
+
+-(void)fetchChatFromUser:(NSString *)senderID toUser:(NSString *)receiverID;
+-(void)submitUserDataWithDictionary:(NSDictionary *)dictionary;
+
+
+
+
 @end
