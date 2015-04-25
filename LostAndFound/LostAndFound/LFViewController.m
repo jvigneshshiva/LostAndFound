@@ -10,10 +10,15 @@
 #import "LFMainPageView.h"
 #import "LFLoginPageView.h"
 #import "LFServerHelper.h"
+#import "LFPhoneNumberRegistrationView.h"
 
-@interface LFViewController () <LFLoginPageViewProtocol>
+@interface LFViewController () <LFLoginPageViewProtocol,LFPhoneNumberRegistrationViewProtocol,LFMainPageViewProtocol, LFServerHelperProtocol>
 
 @property (nonatomic) LFServerHelper *serverHelper;
+
+@property (nonatomic) LFLoginPageView *logInPage;
+@property (nonatomic) LFMainPageView *mainPage;
+@property (nonatomic) LFPhoneNumberRegistrationView *phoneNumberRegistrationPage;
 
 @end
 
@@ -22,10 +27,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.serverHelper = [LFServerHelper sharedServerHelper];
+    self.serverHelper.serverHelperDelegate = self;
     [[UIApplication sharedApplication] setStatusBarHidden:YES
                                             withAnimation:UIStatusBarAnimationFade];
-    
-    [self showLogInPage];
+    if([[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"] == nil)
+    {
+        [self showPhoneNumberRegistrationPage];
+    }
+    else if([[NSUserDefaults standardUserDefaults]boolForKey:@"userDataStoredSuccessfully"] == NO)
+    {
+        [self showLogInPage];
+    }
+    else
+    {
+        [self showMainPage];
+    }
 
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -37,23 +53,31 @@
 
 -(void)showLogInPage
 {
-    LFLoginPageView *logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
-    logInPage.loginPageViewDelegate = self;
-    [self.view addSubview:logInPage];
+    self.logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
+    self.logInPage.loginPageViewDelegate = self;
+    [self.view addSubview:self.logInPage];
 }
 
 -(void)showMainPage
 {
-    LFMainPageView *mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
-    [self.view addSubview:mainPage];
+    self.mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
+    self.mainPage.mainPageViewDelegate = self;
+    [self.view addSubview:self.mainPage];
+}
+
+-(void)showPhoneNumberRegistrationPage
+{
+    self.phoneNumberRegistrationPage = [[LFPhoneNumberRegistrationView alloc]initWithFrame:self.view.frame];
+    self.phoneNumberRegistrationPage.phoneNumberRegistrationViewDelegate = self;
+    [self.view addSubview:self.phoneNumberRegistrationPage];
 }
 
 -(void)userDataSubmittedWithDictionary:(NSDictionary *)dictionary
 {
-    
     NSString *phoneNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"];
     NSMutableDictionary *userDataDictionary = [dictionary mutableCopy];
     userDataDictionary[@"phoneNumber"] = phoneNumber;
+    [self.serverHelper submitUserDataWithDictionary:userDataDictionary];
 
 }
 
@@ -64,9 +88,34 @@
 
 -(void)chatSelectedWithUserId:(NSString *)userId
 {
-    
+    NSString *receiverId = [[NSUserDefaults standardUserDefaults]objectForKey:@"userId"];
+    [self.serverHelper fetchChatFromUser:userId toUser:receiverId];
+
 }
 
+-(void)submitPhoneNumberWith:(NSString *)phoneNumber
+{
+    [self.serverHelper submitPhoneNumberWith:phoneNumber];
+}
 
+-(void)verificationCodeReceived:(NSString *)verificationCode
+{
+    self.phoneNumberRegistrationPage.verificationCode = verificationCode;
+}
+
+-(void)signupSuccessful
+{
+    [self.phoneNumberRegistrationPage removeFromSuperview];
+    self.phoneNumberRegistrationPage = nil;
+    [self showLogInPage];
+}
+
+-(void)userDataSavedSuccessFully
+{
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"userDataStoredSuccessfully"];
+    [self.logInPage removeFromSuperview];
+    self.logInPage = nil;
+    [self showMainPage];
+}
 
 @end

@@ -36,6 +36,9 @@
 		2F8E43CD1AEC38B10093FD6D /* LFItemsListPageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E43CB1AEC38B10093FD6D /* LFItemsListPageViewTableViewCell.m */; };
 		2F8E43D01AEC39A90093FD6D /* LFLoginPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E43CF1AEC39A90093FD6D /* LFLoginPageView.xib */; };
 		2F8E43D41AEC3A780093FD6D /* LFLoginPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E43D31AEC3A780093FD6D /* LFLoginPageView.m */; };
+		2F8E43D71AEC46DC0093FD6D /* ApUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E43D61AEC46DC0093FD6D /* ApUtils.m */; };
+		2F8E43DC1AEC50410093FD6D /* LFPhoneNumberRegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E43DB1AEC50410093FD6D /* LFPhoneNumberRegistrationView.m */; };
+		2F8E43DE1AEC50520093FD6D /* LFPhoneNumberRegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E43DD1AEC50520093FD6D /* LFPhoneNumberRegistrationView.xib */; };
 		2FAE71001AEC11AB00A1EBE9 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70DC1AEC11AB00A1EBE9 /* AFHTTPRequestOperation.m */; };
 		2FAE71011AEC11AB00A1EBE9 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70DE1AEC11AB00A1EBE9 /* AFHTTPRequestOperationManager.m */; };
 		2FAE71021AEC11AB00A1EBE9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70E01AEC11AB00A1EBE9 /* AFHTTPSessionManager.m */; };
@@ -117,6 +120,11 @@
 		2F8E43CF1AEC39A90093FD6D /* LFLoginPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFLoginPageView.xib; sourceTree = "<group>"; };
 		2F8E43D21AEC3A780093FD6D /* LFLoginPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoginPageView.h; sourceTree = "<group>"; };
 		2F8E43D31AEC3A780093FD6D /* LFLoginPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoginPageView.m; sourceTree = "<group>"; };
+		2F8E43D51AEC46DC0093FD6D /* ApUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApUtils.h; sourceTree = "<group>"; };
+		2F8E43D61AEC46DC0093FD6D /* ApUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApUtils.m; sourceTree = "<group>"; };
+		2F8E43DA1AEC50410093FD6D /* LFPhoneNumberRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFPhoneNumberRegistrationView.h; sourceTree = "<group>"; };
+		2F8E43DB1AEC50410093FD6D /* LFPhoneNumberRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFPhoneNumberRegistrationView.m; sourceTree = "<group>"; };
+		2F8E43DD1AEC50520093FD6D /* LFPhoneNumberRegistrationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFPhoneNumberRegistrationView.xib; sourceTree = "<group>"; };
 		2FAE70DB1AEC11AB00A1EBE9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		2FAE70DC1AEC11AB00A1EBE9 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		2FAE70DD1AEC11AB00A1EBE9 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 		2F6BAD071AEBC370008A3784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2F8E43D91AEC500E0093FD6D /* PhoneNumberRegistration */,
 				2F8E43D11AEC3A780093FD6D /* LoginPage */,
 				2F8E43C71AEC38B10093FD6D /* ItemsListPage */,
 				2FAE70D91AEC117800A1EBE9 /* Third Parties */,
@@ -330,6 +339,7 @@
 		2F8DF42F1AEBB8AB00F5C230 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				2F8E43D81AEC50000093FD6D /* PhoneNumberRegistration */,
 				2F8E43CE1AEC39A90093FD6D /* LoginPage */,
 				2F6BAD1C1AEBE13A008A3784 /* ChatPage */,
 				2F6BAD191AEBCDD9008A3784 /* MainPage */,
@@ -376,6 +386,23 @@
 			path = LoginPage;
 			sourceTree = "<group>";
 		};
+		2F8E43D81AEC50000093FD6D /* PhoneNumberRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				2F8E43DD1AEC50520093FD6D /* LFPhoneNumberRegistrationView.xib */,
+			);
+			path = PhoneNumberRegistration;
+			sourceTree = "<group>";
+		};
+		2F8E43D91AEC500E0093FD6D /* PhoneNumberRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				2F8E43DA1AEC50410093FD6D /* LFPhoneNumberRegistrationView.h */,
+				2F8E43DB1AEC50410093FD6D /* LFPhoneNumberRegistrationView.m */,
+			);
+			path = PhoneNumberRegistration;
+			sourceTree = "<group>";
+		};
 		2FAE70D91AEC117800A1EBE9 /* Third Parties */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +412,8 @@
 				2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */,
 				2F8E43C41AEC2B830093FD6D /* ApURLConnection.h */,
 				2F8E43C51AEC2B830093FD6D /* ApURLConnection.m */,
+				2F8E43D51AEC46DC0093FD6D /* ApUtils.h */,
+				2F8E43D61AEC46DC0093FD6D /* ApUtils.m */,
 			);
 			name = "Third Parties";
 			sourceTree = "<group>";
@@ -528,6 +557,7 @@
 				2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
 				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
+				2F8E43DE1AEC50520093FD6D /* LFPhoneNumberRegistrationView.xib in Resources */,
 				6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */,
 				6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */,
 				2F6BAD211AEBE17D008A3784 /* LFChatPageView.xib in Resources */,
@@ -552,6 +582,7 @@
 			files = (
 				2F6BAD321AEC0740008A3784 /* AllInOneView.m in Sources */,
 				2FAE710A1AEC11AB00A1EBE9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				2F8E43D71AEC46DC0093FD6D /* ApUtils.m in Sources */,
 				2FAE710F1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m in Sources */,
 				2FAE710C1AEC11AB00A1EBE9 /* UIButton+AFNetworking.m in Sources */,
 				2F8E43C61AEC2B830093FD6D /* ApURLConnection.m in Sources */,
@@ -566,6 +597,7 @@
 				2FAE71011AEC11AB00A1EBE9 /* AFHTTPRequestOperationManager.m in Sources */,
 				2F8DF42A1AEBA61200F5C230 /* LFPanoramaViewWidget.m in Sources */,
 				2FAE71041AEC11AB00A1EBE9 /* AFSecurityPolicy.m in Sources */,
+				2F8E43DC1AEC50410093FD6D /* LFPhoneNumberRegistrationView.m in Sources */,
 				2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */,
 				2FAE71061AEC11AB00A1EBE9 /* AFURLRequestSerialization.m in Sources */,
 				2FAE71031AEC11AB00A1EBE9 /* AFNetworkReachabilityManager.m in Sources */,

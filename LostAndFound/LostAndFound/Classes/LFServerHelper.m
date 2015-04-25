@@ -15,13 +15,13 @@ typedef enum
     CHAT_SEND_URL_CONNECTION_TAG,
     ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG,
     USERDATA_SUBMISSION_URL_CONNECTION_TAG,
-    TIME_FETCH_URL_CONNECTION_TAG
+    PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG
 }URL_CONNECTION_TYPE;
 
 #define CHAT_FETCH_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
 #define ITEM_LIST_DATA_FETCH @"https://dynamic-chiller-92609.appspot.com/hack?"
-#define TIME_FETCH_URL @""
-#define USERDATA_SUBMISSION_URL @""
+#define PHONE_NUMBER_SUBMIT_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
+#define USERDATA_SUBMISSION_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
 
 @implementation LFServerHelper
 
@@ -52,11 +52,11 @@ typedef enum
             break;
             
         case USERDATA_SUBMISSION_URL_CONNECTION_TAG:
-            
+            [self.serverHelperDelegate userDataSavedSuccessFully];
             break;
             
-        case TIME_FETCH_URL_CONNECTION_TAG:
-            
+        case PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG:
+            [self.serverHelperDelegate verificationCodeReceived:str];
             break;
             
         default:
@@ -67,7 +67,20 @@ typedef enum
 
 -(void)fetchChatData
 {
+    /*
     
+    NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"message"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"20put"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&fromUserId="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", senderID]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&toUserId="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", receiverID]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&text="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", message]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&messageType="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"0"]]; */
 }
 
 -(void)submitUserDataWithDictionary:(NSDictionary *)dictionary
@@ -77,10 +90,10 @@ typedef enum
     [postParameter appendString:[NSString stringWithFormat:@"%@",@"userRegistration"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&name="]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"name"]]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&email="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"email"]]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&phoneNumber="]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"phoneNumber"]]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&email="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"email"]]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&sex="]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", dictionary[@"sex"]]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&imageURL="]];
@@ -111,9 +124,14 @@ typedef enum
     fetchChatURLConnection.tag = CHAT_GET_URL_CONNECTION_TAG;
 }
 
--(void)fetchTime
+-(void)submitPhoneNumberWith:(NSString *)phoneNumber
 {
-    
+    NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"sendVerificationCode"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&phoneNumber="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", phoneNumber]];
+    ApURLConnection *phoneNumberSubmissionURLConnection =[[ApURLConnection alloc]  initWithURL:PHONE_NUMBER_SUBMIT_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
+    phoneNumberSubmissionURLConnection.tag = PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG;
 }
 
 
