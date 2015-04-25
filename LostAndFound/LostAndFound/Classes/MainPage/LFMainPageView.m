@@ -62,7 +62,7 @@
                                      @"itemName" : @"Ring",
                                      @"location" : @"bangalore"
                                      };
-    self.itemsListPageView = [[LFItemsListPageView alloc]initWithFrame:self.pageOne.frame];
+    self.itemsListPageView = [[LFItemsListPageView alloc]initWithFrame:[self.pageOne detailViewBounds]];
     [self.itemsListPageView  configureItemListWith:@[itemDictionary,itemDictionary,itemDictionary,itemDictionary,itemDictionary]];
     [self.pageOne addSubviewToDetailView:self.itemsListPageView];
 }
@@ -70,7 +70,7 @@
 -(void)configurePageTwo
 {
     self.pageTwo = [[LFPanoramaViewWidgetPage alloc]initWithFrame:self.pageViewHolder.frame];
-    [self.pageOne setHeadingToView:@"Chat"];
+    [self.pageTwo setHeadingToView:@"Chat"];
     NSDictionary *chatMessage = @{
                                      @"userName" : @"Vignesh",
                                      @"message" : @"HIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIII",
@@ -81,7 +81,7 @@
                                   @"message" : @"HIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIII",
                                   @"hasUserSentThisMessage" : @(YES)
                                   };
-    self.chatPageView = [[LFChatPageView alloc]initWithFrame:self.pageTwo.frame];
+    self.chatPageView = [[LFChatPageView alloc]initWithFrame:[self.pageOne detailViewBounds]];
     [self.chatPageView  configureChatMessages:@[chatMessage,chatMessage1,chatMessage,chatMessage1,chatMessage]];
     [self.pageTwo addSubviewToDetailView:self.chatPageView];
 }

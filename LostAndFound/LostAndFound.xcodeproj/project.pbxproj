@@ -19,6 +19,8 @@
 		2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD271AEBE2BA008A3784 /* LFChatPageTableViewCell.xib */; };
 		2F6BAD2C1AEBECB0008A3784 /* SpeechBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD2B1AEBECB0008A3784 /* SpeechBubbleView.m */; };
 		2F6BAD2F1AEBFBED008A3784 /* Button_Bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD2E1AEBFBED008A3784 /* Button_Bg.png */; };
+		2F6BAD321AEC0740008A3784 /* AllInOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD311AEC0740008A3784 /* AllInOneView.m */; };
+		2F6BAD341AEC0EFA008A3784 /* LostPng.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6BAD331AEC0EFA008A3784 /* LostPng.png */; };
 		2F8DF4021AEB9F8400F5C230 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4011AEB9F8400F5C230 /* main.m */; };
 		2F8DF4051AEB9F8400F5C230 /* LFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4041AEB9F8400F5C230 /* LFAppDelegate.m */; };
 		2F8DF4081AEB9F8400F5C230 /* LFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4071AEB9F8400F5C230 /* LFViewController.m */; };
@@ -64,6 +66,9 @@
 		2F6BAD2A1AEBECB0008A3784 /* SpeechBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechBubbleView.h; sourceTree = "<group>"; };
 		2F6BAD2B1AEBECB0008A3784 /* SpeechBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechBubbleView.m; sourceTree = "<group>"; };
 		2F6BAD2E1AEBFBED008A3784 /* Button_Bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Bg.png; sourceTree = "<group>"; };
+		2F6BAD301AEC0740008A3784 /* AllInOneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllInOneView.h; sourceTree = "<group>"; };
+		2F6BAD311AEC0740008A3784 /* AllInOneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllInOneView.m; sourceTree = "<group>"; };
+		2F6BAD331AEC0EFA008A3784 /* LostPng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LostPng.png; sourceTree = "<group>"; };
 		2F8DF3FC1AEB9F8400F5C230 /* LostAndFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostAndFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8DF4001AEB9F8400F5C230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8DF4011AEB9F8400F5C230 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -178,6 +183,7 @@
 		2F6BAD2D1AEBFBDE008A3784 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F6BAD331AEC0EFA008A3784 /* LostPng.png */,
 				2F6BAD2E1AEBFBED008A3784 /* Button_Bg.png */,
 			);
 			path = Images;
@@ -252,6 +258,8 @@
 		2F8DF4251AEBA61200F5C230 /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				2F6BAD301AEC0740008A3784 /* AllInOneView.h */,
+				2F6BAD311AEC0740008A3784 /* AllInOneView.m */,
 				2F6BAD2A1AEBECB0008A3784 /* SpeechBubbleView.h */,
 				2F6BAD2B1AEBECB0008A3784 /* SpeechBubbleView.m */,
 				2F8DF4261AEBA61200F5C230 /* LFPanoramaViewWidget.h */,
@@ -364,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6BAD341AEC0EFA008A3784 /* LostPng.png in Resources */,
 				2F6BAD2F1AEBFBED008A3784 /* Button_Bg.png in Resources */,
 				2F6BAD111AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib in Resources */,
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
@@ -393,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6BAD321AEC0740008A3784 /* AllInOneView.m in Sources */,
 				2F6BAD241AEBE21A008A3784 /* LFChatPageView.m in Sources */,
 				2F6BAD141AEBC73F008A3784 /* LFItemsListPageViewTableViewCell.m in Sources */,
 				2F6BAD281AEBE2BA008A3784 /* LFChatPageTableViewCell.m in Sources */,
