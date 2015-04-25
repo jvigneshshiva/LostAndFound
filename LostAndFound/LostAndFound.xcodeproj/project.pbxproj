@@ -19,6 +19,8 @@
 		2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF42D1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m */; };
 		2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */; };
 		2F8DF4351AEBBEB800F5C230 /* UIView+XIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4341AEBBEB800F5C230 /* UIView+XIB.m */; };
+		6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013841AEBC30C00848E43 /* BubbleLefthand.png */; };
+		6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013851AEBC30C00848E43 /* BubbleRighthand.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFPanoramaViewWidgetPage.xib; sourceTree = "<group>"; };
 		2F8DF4331AEBBEB800F5C230 /* UIView+XIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XIB.h"; sourceTree = "<group>"; };
 		2F8DF4341AEBBEB800F5C230 /* UIView+XIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XIB.m"; sourceTree = "<group>"; };
+		6BC013841AEBC30C00848E43 /* BubbleLefthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleLefthand.png; sourceTree = "<group>"; };
+		6BC013851AEBC30C00848E43 /* BubbleRighthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleRighthand.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				2F8DF4041AEB9F8400F5C230 /* LFAppDelegate.m */,
 				2F8DF4061AEB9F8400F5C230 /* LFViewController.h */,
 				2F8DF4071AEB9F8400F5C230 /* LFViewController.m */,
+				6BC013841AEBC30C00848E43 /* BubbleLefthand.png */,
+				6BC013851AEBC30C00848E43 /* BubbleRighthand.png */,
 				2F8DF4091AEB9F8400F5C230 /* Main.storyboard */,
 				2F8DF40C1AEB9F8400F5C230 /* Images.xcassets */,
 				2F8DF40E1AEB9F8400F5C230 /* LaunchScreen.xib */,
@@ -249,6 +255,8 @@
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
 				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
+				6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */,
+				6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */,
 				2F8DF40D1AEB9F8400F5C230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +474,7 @@
 				2F8DF4211AEB9F8500F5C230 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F8DF4221AEB9F8500F5C230 /* Build configuration list for PBXNativeTarget "LostAndFoundTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +483,7 @@
 				2F8DF4241AEB9F8500F5C230 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
