@@ -54,6 +54,8 @@
 		2FAE710F1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70FD1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m */; };
 		2FAE71101AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70FF1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m */; };
 		2FAE711A1AEC25A100A1EBE9 /* LFServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */; };
+		6B6E09F01AEC46CC009CAC2C /* PostHelpPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */; };
+		6B8C1C971AEC519700B2A24F /* PostHelpPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */; };
 		6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013841AEBC30C00848E43 /* BubbleLefthand.png */; };
 		6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013851AEBC30C00848E43 /* BubbleRighthand.png */; };
 /* End PBXBuildFile section */
@@ -155,6 +157,9 @@
 		2FAE70FF1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		2FAE71181AEC25A100A1EBE9 /* LFServerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFServerHelper.h; sourceTree = "<group>"; };
 		2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFServerHelper.m; sourceTree = "<group>"; };
+		6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostHelpPopupView.xib; sourceTree = "<group>"; };
+		6B8C1C951AEC519700B2A24F /* PostHelpPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHelpPopupView.h; sourceTree = "<group>"; };
+		6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpPopupView.m; sourceTree = "<group>"; };
 		6BC013841AEBC30C00848E43 /* BubbleLefthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleLefthand.png; sourceTree = "<group>"; };
 		6BC013851AEBC30C00848E43 /* BubbleRighthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleRighthand.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,6 +328,7 @@
 				2F8DF4291AEBA61200F5C230 /* SwipeView.m */,
 				2F8DF42C1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.h */,
 				2F8DF42D1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m */,
+				6B8C1C921AEC515000B2A24F /* New Group */,
 			);
 			path = UIWidgets;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				2F6BAD191AEBCDD9008A3784 /* MainPage */,
 				2F6BAD0C1AEBC510008A3784 /* ItemsListPage */,
 				2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */,
+				6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -352,6 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				2F8E43C81AEC38B10093FD6D /* LFItemsListPageView.h */,
+				6B8C1C951AEC519700B2A24F /* PostHelpPopupView.h */,
+				6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */,
 				2F8E43C91AEC38B10093FD6D /* LFItemsListPageView.m */,
 				2F8E43CA1AEC38B10093FD6D /* LFItemsListPageViewTableViewCell.h */,
 				2F8E43CB1AEC38B10093FD6D /* LFItemsListPageViewTableViewCell.m */,
@@ -437,6 +446,13 @@
 				2FAE70FF1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		6B8C1C921AEC515000B2A24F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,6 +541,7 @@
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
 				2F6BAD0E1AEBC51E008A3784 /* LFItemsListPageView.xib in Resources */,
 				2F8E43D01AEC39A90093FD6D /* LFLoginPageView.xib in Resources */,
+				6B6E09F01AEC46CC009CAC2C /* PostHelpPopupView.xib in Resources */,
 				2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
 				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
@@ -568,6 +585,7 @@
 				2FAE71041AEC11AB00A1EBE9 /* AFSecurityPolicy.m in Sources */,
 				2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */,
 				2FAE71061AEC11AB00A1EBE9 /* AFURLRequestSerialization.m in Sources */,
+				6B8C1C971AEC519700B2A24F /* PostHelpPopupView.m in Sources */,
 				2FAE71031AEC11AB00A1EBE9 /* AFNetworkReachabilityManager.m in Sources */,
 				2F8DF4051AEB9F8400F5C230 /* LFAppDelegate.m in Sources */,
 				2FAE710D1AEC11AB00A1EBE9 /* UIImageView+AFNetworking.m in Sources */,
