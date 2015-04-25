@@ -11,6 +11,7 @@
 #import "LFLoginPageView.h"
 #import "LFServerHelper.h"
 #import "LFPhoneNumberRegistrationView.h"
+#import "UIView+XIB.h"
 
 @interface LFViewController () <LFLoginPageViewProtocol,LFPhoneNumberRegistrationViewProtocol,LFMainPageViewProtocol, LFServerHelperProtocol>
 
@@ -56,6 +57,11 @@
     self.logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
     self.logInPage.loginPageViewDelegate = self;
     [self.view addSubview:self.logInPage];
+    
+    LFLoginPageView *logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
+    logInPage.loginPageViewDelegate = self;
+//    [self.view addSubview:logInPage];
+    [self.view addSubViewWithXibName:@"ItemStateView" andFrame:CGRectMake(0, 15, 320, 450)];
 }
 
 -(void)showMainPage
