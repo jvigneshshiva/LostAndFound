@@ -8,6 +8,7 @@
 
 #import "LFViewController.h"
 #import "LFMainPageView.h"
+#import "LFLoginPageView.h"
 
 @interface LFViewController ()
 
@@ -17,8 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LFMainPageView *mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
-    [self.view addSubview:mainPage];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES
+                                            withAnimation:UIStatusBarAnimationFade];
+//    LFMainPageView *mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
+//    [self.view addSubview:mainPage];
+    LFLoginPageView *logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:logInPage];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

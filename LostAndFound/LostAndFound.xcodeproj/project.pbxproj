@@ -51,6 +51,9 @@
 		2FAE710E1AEC11AB00A1EBE9 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70FB1AEC11AB00A1EBE9 /* UIProgressView+AFNetworking.m */; };
 		2FAE710F1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70FD1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m */; };
 		2FAE71101AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE70FF1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m */; };
+		2FAE71151AEC155B00A1EBE9 /* LFLoginPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE71141AEC155B00A1EBE9 /* LFLoginPageView.m */; };
+		2FAE71171AEC158B00A1EBE9 /* LFLoginPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAE71161AEC158B00A1EBE9 /* LFLoginPageView.xib */; };
+		2FAE711A1AEC25A100A1EBE9 /* LFServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */; };
 		6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013841AEBC30C00848E43 /* BubbleLefthand.png */; };
 		6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013851AEBC30C00848E43 /* BubbleRighthand.png */; };
 /* End PBXBuildFile section */
@@ -147,6 +150,11 @@
 		2FAE70FD1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		2FAE70FE1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		2FAE70FF1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		2FAE71131AEC155B00A1EBE9 /* LFLoginPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoginPageView.h; sourceTree = "<group>"; };
+		2FAE71141AEC155B00A1EBE9 /* LFLoginPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoginPageView.m; sourceTree = "<group>"; };
+		2FAE71161AEC158B00A1EBE9 /* LFLoginPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFLoginPageView.xib; sourceTree = "<group>"; };
+		2FAE71181AEC25A100A1EBE9 /* LFServerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFServerHelper.h; sourceTree = "<group>"; };
+		2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFServerHelper.m; sourceTree = "<group>"; };
 		6BC013841AEBC30C00848E43 /* BubbleLefthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleLefthand.png; sourceTree = "<group>"; };
 		6BC013851AEBC30C00848E43 /* BubbleRighthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleRighthand.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +180,7 @@
 		2F6BAD071AEBC370008A3784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE71121AEC153400A1EBE9 /* LoginPage */,
 				2FAE70D91AEC117800A1EBE9 /* Third Parties */,
 				2F6BAD1D1AEBE145008A3784 /* ChatPage */,
 				2F6BAD151AEBCD9E008A3784 /* MainPage */,
@@ -334,6 +343,7 @@
 		2F8DF42F1AEBB8AB00F5C230 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE71111AEC150F00A1EBE9 /* LoginPage */,
 				2F6BAD1C1AEBE13A008A3784 /* ChatPage */,
 				2F6BAD191AEBCDD9008A3784 /* MainPage */,
 				2F6BAD0C1AEBC510008A3784 /* ItemsListPage */,
@@ -356,6 +366,8 @@
 			children = (
 				2FAE70DA1AEC11AB00A1EBE9 /* AFNetworking */,
 				2FAE70EE1AEC11AB00A1EBE9 /* UIKit+AFNetworking */,
+				2FAE71181AEC25A100A1EBE9 /* LFServerHelper.h */,
+				2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */,
 			);
 			name = "Third Parties";
 			sourceTree = "<group>";
@@ -408,6 +420,23 @@
 				2FAE70FF1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		2FAE71111AEC150F00A1EBE9 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE71161AEC158B00A1EBE9 /* LFLoginPageView.xib */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		2FAE71121AEC153400A1EBE9 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE71131AEC155B00A1EBE9 /* LFLoginPageView.h */,
+				2FAE71141AEC155B00A1EBE9 /* LFLoginPageView.m */,
+			);
+			path = LoginPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +524,7 @@
 				2F6BAD111AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib in Resources */,
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
 				2F6BAD0E1AEBC51E008A3784 /* LFItemsListPageView.xib in Resources */,
+				2FAE71171AEC158B00A1EBE9 /* LFLoginPageView.xib in Resources */,
 				2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
 				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
@@ -535,6 +565,7 @@
 				2FAE710E1AEC11AB00A1EBE9 /* UIProgressView+AFNetworking.m in Sources */,
 				2FAE71011AEC11AB00A1EBE9 /* AFHTTPRequestOperationManager.m in Sources */,
 				2F8DF42A1AEBA61200F5C230 /* LFPanoramaViewWidget.m in Sources */,
+				2FAE71151AEC155B00A1EBE9 /* LFLoginPageView.m in Sources */,
 				2FAE71041AEC11AB00A1EBE9 /* AFSecurityPolicy.m in Sources */,
 				2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */,
 				6B6E09EE1AEC28F1009CAC2C /* ApURLConnection.m in Sources */,
@@ -547,6 +578,7 @@
 				2F8DF4021AEB9F8400F5C230 /* main.m in Sources */,
 				2F6BAD2C1AEBECB0008A3784 /* SpeechBubbleView.m in Sources */,
 				2FAE71001AEC11AB00A1EBE9 /* AFHTTPRequestOperation.m in Sources */,
+				2FAE711A1AEC25A100A1EBE9 /* LFServerHelper.m in Sources */,
 				2F6BAD181AEBCDBF008A3784 /* LFMainPageView.m in Sources */,
 				2FAE71091AEC11AB00A1EBE9 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2FAE71021AEC11AB00A1EBE9 /* AFHTTPSessionManager.m in Sources */,
