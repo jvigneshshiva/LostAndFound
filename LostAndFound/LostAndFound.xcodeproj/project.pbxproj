@@ -54,6 +54,7 @@
 		2FAE71151AEC155B00A1EBE9 /* LFLoginPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE71141AEC155B00A1EBE9 /* LFLoginPageView.m */; };
 		2FAE71171AEC158B00A1EBE9 /* LFLoginPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAE71161AEC158B00A1EBE9 /* LFLoginPageView.xib */; };
 		2FAE711A1AEC25A100A1EBE9 /* LFServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */; };
+		2FAE711D1AEC2A0C00A1EBE9 /* ApURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE711C1AEC2A0C00A1EBE9 /* ApURLConnection.m */; };
 		6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013841AEBC30C00848E43 /* BubbleLefthand.png */; };
 		6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013851AEBC30C00848E43 /* BubbleRighthand.png */; };
 /* End PBXBuildFile section */
@@ -155,6 +156,8 @@
 		2FAE71161AEC158B00A1EBE9 /* LFLoginPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFLoginPageView.xib; sourceTree = "<group>"; };
 		2FAE71181AEC25A100A1EBE9 /* LFServerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFServerHelper.h; sourceTree = "<group>"; };
 		2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFServerHelper.m; sourceTree = "<group>"; };
+		2FAE711B1AEC2A0C00A1EBE9 /* ApURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApURLConnection.h; sourceTree = "<group>"; };
+		2FAE711C1AEC2A0C00A1EBE9 /* ApURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApURLConnection.m; sourceTree = "<group>"; };
 		6BC013841AEBC30C00848E43 /* BubbleLefthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleLefthand.png; sourceTree = "<group>"; };
 		6BC013851AEBC30C00848E43 /* BubbleRighthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleRighthand.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -364,6 +367,8 @@
 		2FAE70D91AEC117800A1EBE9 /* Third Parties */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE711B1AEC2A0C00A1EBE9 /* ApURLConnection.h */,
+				2FAE711C1AEC2A0C00A1EBE9 /* ApURLConnection.m */,
 				2FAE70DA1AEC11AB00A1EBE9 /* AFNetworking */,
 				2FAE70EE1AEC11AB00A1EBE9 /* UIKit+AFNetworking */,
 				2FAE71181AEC25A100A1EBE9 /* LFServerHelper.h */,
@@ -552,6 +557,7 @@
 			files = (
 				2F6BAD321AEC0740008A3784 /* AllInOneView.m in Sources */,
 				2FAE710A1AEC11AB00A1EBE9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				2FAE711D1AEC2A0C00A1EBE9 /* ApURLConnection.m in Sources */,
 				2FAE710F1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m in Sources */,
 				2FAE710C1AEC11AB00A1EBE9 /* UIButton+AFNetworking.m in Sources */,
 				2FAE710B1AEC11AB00A1EBE9 /* UIAlertView+AFNetworking.m in Sources */,
