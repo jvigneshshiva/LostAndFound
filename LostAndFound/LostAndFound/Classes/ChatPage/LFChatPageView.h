@@ -10,4 +10,6 @@
 
 @interface LFChatPageView : UIView
 
+-(void)configureChatMessages:(NSArray *)chatMessagesArray;
+
 @end

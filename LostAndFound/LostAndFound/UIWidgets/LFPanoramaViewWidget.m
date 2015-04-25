@@ -37,7 +37,7 @@
     self.swipeView.dataSource = self;
     self.swipeView.alignment = SwipeViewAlignmentEdge;
     self.swipeView.pagingEnabled = YES;
-    self.swipeView.wrapEnabled = YES;
+    self.swipeView.wrapEnabled = NO;
 }
 
 - (NSInteger)numberOfItemsInSwipeView:(__unused SwipeView *)swipeView

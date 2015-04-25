@@ -7,21 +7,19 @@
 //
 
 #import "LFChatPageView.h"
-
-@implementation LFChatPageView
-
-#import "LFItemsListPageView.h"
 #import "UIView+XIB.h"
-#import "LFItemsListPageViewTableViewCell.h"
+#import "LFChatPageTableViewCell.h"
 
-@interface LFItemsListPageView()<UITableViewDataSource,UITableViewDelegate,LFItemsListPageViewTableViewCellProtocol>
 
-@property (weak, nonatomic) IBOutlet UITableView *itemsListTableView;
-@property (nonatomic) NSArray *itemsListArray;
+
+@interface LFChatPageView()<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *chatMessagesTableView;
+@property (nonatomic) NSArray *chatMessagesArray;
 
 @end
 
-@implementation LFItemsListPageView
+@implementation LFChatPageView
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -29,34 +27,33 @@
     if(self)
     {
         [self addSubViewWithXibName:NSStringFromClass([self class]) andFrame:self.bounds];
-        [self.itemsListTableView registerNib:[UINib nibWithNibName:@"LFItemsListPageViewTableViewCell" bundle:nil] forCellReuseIdentifier:@"LFItemsListPageViewTableViewCell"];
+        [self.chatMessagesTableView registerNib:[UINib nibWithNibName:@"LFChatPageTableViewCell" bundle:nil] forCellReuseIdentifier:@"LFChatPageTableViewCell"];
     }
     return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.itemsListArray count];
+    return [self.chatMessagesArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    LFItemsListPageViewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LFItemsListPageViewTableViewCell"];
+    LFChatPageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LFChatPageTableViewCell"];
     if (cell == nil)
     {
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"LFItemsListPageViewTableViewCell" owner:nil options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"LFChatPageTableViewCell" owner:nil options:nil];
         cell = [topLevelObjects objectAtIndex:0];
     }
-    cell.LFItemsListPageViewTableViewCellDelegate = self;
-    [cell configureCellWithDictionary:self.itemsListArray[indexPath.row]];
+    [cell configureCellWithDictionary:self.chatMessagesArray[indexPath.row]];
     return cell;
 }
 
--(void)configureItemListWith:(NSArray *)itemListArray
+-(void)configureChatMessages:(NSArray *)chatMessagesArray
 {
-    self.itemsListArray = itemListArray;
-    [self.itemsListTableView reloadData];
+    self.chatMessagesArray = chatMessagesArray;
+    [self.chatMessagesTableView reloadData];
 }
 
 -(void)contactButtonPressedWithTag:(int)tag

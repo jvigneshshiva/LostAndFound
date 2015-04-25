@@ -10,4 +10,7 @@
 
 @interface LFChatPageTableViewCell : UITableViewCell
 
+-(void)configureCellWithDictionary:(NSDictionary *)dictionary;
+
+
 @end

@@ -10,6 +10,7 @@
 #import "LFPanoramaViewWidget.h"
 #import "LFPanoramaViewWidgetPage.h"
 #import "LFItemsListPageView.h"
+#import "LFChatPageView.h"
 
 #import "UIView+XIB.h"
 
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *pageViewHolder;
 
 @property (nonatomic) LFItemsListPageView *itemsListPageView;
+@property (nonatomic) LFChatPageView *chatPageView;
 @property (nonatomic) LFPanoramaViewWidget *panoramaView;
 @property (nonatomic) LFPanoramaViewWidgetPage *pageOne;
 @property (nonatomic) LFPanoramaViewWidgetPage *pageTwo;
@@ -43,7 +45,10 @@
 
 -(void)configurePanoramaView
 {
-    self.panoramaView = [[LFPanoramaViewWidget alloc]initWithFrame:self.panoramaViewHolder.frame andViewsArray:@[self.pageOne]];
+    [self configurePageOne];
+    [self configurePageTwo];
+    self.panoramaView = [[LFPanoramaViewWidget alloc]initWithFrame:self.panoramaViewHolder.frame andViewsArray:@[self.pageOne,self.pageTwo]];
+
     [self addSubview:self.panoramaView];
 }
 
@@ -60,6 +65,25 @@
     self.itemsListPageView = [[LFItemsListPageView alloc]initWithFrame:self.pageOne.frame];
     [self.itemsListPageView  configureItemListWith:@[itemDictionary,itemDictionary,itemDictionary,itemDictionary,itemDictionary]];
     [self.pageOne addSubviewToDetailView:self.itemsListPageView];
+}
+
+-(void)configurePageTwo
+{
+    self.pageTwo = [[LFPanoramaViewWidgetPage alloc]initWithFrame:self.pageViewHolder.frame];
+    [self.pageOne setHeadingToView:@"Chat"];
+    NSDictionary *chatMessage = @{
+                                     @"userName" : @"Vignesh",
+                                     @"message" : @"HIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIII",
+                                     @"hasUserSentThisMessage" : @(NO)
+                                     };
+    NSDictionary *chatMessage1 = @{
+                                  @"userName" : @"Shiva",
+                                  @"message" : @"HIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIIIHIIII",
+                                  @"hasUserSentThisMessage" : @(YES)
+                                  };
+    self.chatPageView = [[LFChatPageView alloc]initWithFrame:self.pageTwo.frame];
+    [self.chatPageView  configureChatMessages:@[chatMessage,chatMessage1,chatMessage,chatMessage1,chatMessage]];
+    [self.pageTwo addSubviewToDetailView:self.chatPageView];
 }
 
 /*
