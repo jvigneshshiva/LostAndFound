@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F6BAD0B1AEBC439008A3784 /* ItemsListPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BAD0A1AEBC439008A3784 /* ItemsListPageView.m */; };
 		2F8DF4021AEB9F8400F5C230 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4011AEB9F8400F5C230 /* main.m */; };
 		2F8DF4051AEB9F8400F5C230 /* LFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4041AEB9F8400F5C230 /* LFAppDelegate.m */; };
 		2F8DF4081AEB9F8400F5C230 /* LFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DF4071AEB9F8400F5C230 /* LFViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F6BAD091AEBC439008A3784 /* ItemsListPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsListPageView.h; sourceTree = "<group>"; };
+		2F6BAD0A1AEBC439008A3784 /* ItemsListPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsListPageView.m; sourceTree = "<group>"; };
 		2F8DF3FC1AEB9F8400F5C230 /* LostAndFound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostAndFound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8DF4001AEB9F8400F5C230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8DF4011AEB9F8400F5C230 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F6BAD071AEBC370008A3784 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2F6BAD081AEBC370008A3784 /* ItemsListPage */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2F6BAD081AEBC370008A3784 /* ItemsListPage */ = {
+			isa = PBXGroup;
+			children = (
+				2F6BAD091AEBC439008A3784 /* ItemsListPageView.h */,
+				2F6BAD0A1AEBC439008A3784 /* ItemsListPageView.m */,
+			);
+			path = ItemsListPage;
+			sourceTree = "<group>";
+		};
 		2F8DF3F31AEB9F8400F5C230 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +119,7 @@
 		2F8DF3FE1AEB9F8400F5C230 /* LostAndFound */ = {
 			isa = PBXGroup;
 			children = (
+				2F6BAD071AEBC370008A3784 /* Classes */,
 				2F8DF4321AEBBEAB00F5C230 /* Categories */,
 				2F8DF42F1AEBB8AB00F5C230 /* Xib */,
 				2F8DF4251AEBA61200F5C230 /* UIWidgets */,
@@ -279,6 +300,7 @@
 				2F8DF4081AEB9F8400F5C230 /* LFViewController.m in Sources */,
 				2F8DF42A1AEBA61200F5C230 /* LFPanoramaViewWidget.m in Sources */,
 				2F8DF42E1AEBB87900F5C230 /* LFPanoramaViewWidgetPage.m in Sources */,
+				2F6BAD0B1AEBC439008A3784 /* ItemsListPageView.m in Sources */,
 				2F8DF4051AEB9F8400F5C230 /* LFAppDelegate.m in Sources */,
 				2F8DF4021AEB9F8400F5C230 /* main.m in Sources */,
 				2F8DF42B1AEBA61200F5C230 /* SwipeView.m in Sources */,
