@@ -8,12 +8,13 @@
 
 #import "LFViewController.h"
 #import "LFMainPageView.h"
+#import "LFMainPagView1.h"
 #import "LFLoginPageView.h"
 #import "LFServerHelper.h"
 #import "LFPhoneNumberRegistrationView.h"
 #import "UIView+XIB.h"
 
-@interface LFViewController () <LFLoginPageViewProtocol,LFPhoneNumberRegistrationViewProtocol,LFMainPageViewProtocol, LFServerHelperProtocol>
+@interface LFViewController () <LFLoginPageViewProtocol,LFPhoneNumberRegistrationViewProtocol,LFMainPageViewProtocol, LFServerHelperProtocol, LFMainPagView1Protocol>
 
 @property (nonatomic) LFServerHelper *serverHelper;
 
@@ -134,6 +135,11 @@
 -(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
 {
     
+}
+
+-(void)cellClicked:(NSString *)categoryName
+{
+    //server
 }
 
 @end

@@ -59,6 +59,16 @@
 		2FAE711A1AEC25A100A1EBE9 /* LFServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */; };
 		6B6E09F01AEC46CC009CAC2C /* PostHelpPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */; };
 		6B8C1C971AEC519700B2A24F /* PostHelpPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */; };
+		6B8C1C991AEC6DA400B2A24F /* LFMainPageView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1C981AEC6DA400B2A24F /* LFMainPageView1.xib */; };
+		6B8C1C9C1AEC6E7B00B2A24F /* LFMainPagView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1C9B1AEC6E7B00B2A24F /* LFMainPagView1.m */; };
+		6B8C1C9E1AEC6F3F00B2A24F /* LPMainPageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1C9D1AEC6F3F00B2A24F /* LPMainPageViewCell.xib */; };
+		6B8C1CA11AEC6F6F00B2A24F /* LPMainPageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA01AEC6F6F00B2A24F /* LPMainPageViewCell.m */; };
+		6B8C1CA81AEC747200B2A24F /* Companionship.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA21AEC747200B2A24F /* Companionship.png */; };
+		6B8C1CA91AEC747200B2A24F /* Counselling.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA31AEC747200B2A24F /* Counselling.png */; };
+		6B8C1CAA1AEC747200B2A24F /* Education.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA41AEC747200B2A24F /* Education.png */; };
+		6B8C1CAB1AEC747200B2A24F /* Housing.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA51AEC747200B2A24F /* Housing.png */; };
+		6B8C1CAC1AEC747200B2A24F /* Jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA61AEC747200B2A24F /* Jobs.png */; };
+		6B8C1CAD1AEC747200B2A24F /* Others.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA71AEC747200B2A24F /* Others.png */; };
 		6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013841AEBC30C00848E43 /* BubbleLefthand.png */; };
 		6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013851AEBC30C00848E43 /* BubbleRighthand.png */; };
 /* End PBXBuildFile section */
@@ -168,6 +178,18 @@
 		6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostHelpPopupView.xib; path = ../PostHelpPopupView.xib; sourceTree = "<group>"; };
 		6B8C1C951AEC519700B2A24F /* PostHelpPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHelpPopupView.h; sourceTree = "<group>"; };
 		6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpPopupView.m; sourceTree = "<group>"; };
+		6B8C1C981AEC6DA400B2A24F /* LFMainPageView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFMainPageView1.xib; sourceTree = "<group>"; };
+		6B8C1C9A1AEC6E7B00B2A24F /* LFMainPagView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMainPagView1.h; sourceTree = "<group>"; };
+		6B8C1C9B1AEC6E7B00B2A24F /* LFMainPagView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMainPagView1.m; sourceTree = "<group>"; };
+		6B8C1C9D1AEC6F3F00B2A24F /* LPMainPageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPMainPageViewCell.xib; sourceTree = "<group>"; };
+		6B8C1C9F1AEC6F6F00B2A24F /* LPMainPageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainPageViewCell.h; sourceTree = "<group>"; };
+		6B8C1CA01AEC6F6F00B2A24F /* LPMainPageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainPageViewCell.m; sourceTree = "<group>"; };
+		6B8C1CA21AEC747200B2A24F /* Companionship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Companionship.png; sourceTree = "<group>"; };
+		6B8C1CA31AEC747200B2A24F /* Counselling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Counselling.png; sourceTree = "<group>"; };
+		6B8C1CA41AEC747200B2A24F /* Education.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Education.png; sourceTree = "<group>"; };
+		6B8C1CA51AEC747200B2A24F /* Housing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Housing.png; sourceTree = "<group>"; };
+		6B8C1CA61AEC747200B2A24F /* Jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jobs.png; sourceTree = "<group>"; };
+		6B8C1CA71AEC747200B2A24F /* Others.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Others.png; sourceTree = "<group>"; };
 		6BC013841AEBC30C00848E43 /* BubbleLefthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleLefthand.png; sourceTree = "<group>"; };
 		6BC013851AEBC30C00848E43 /* BubbleRighthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleRighthand.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +221,8 @@
 				2FAE70D91AEC117800A1EBE9 /* Third Parties */,
 				2F6BAD1D1AEBE145008A3784 /* ChatPage */,
 				2F6BAD151AEBCD9E008A3784 /* MainPage */,
+				6B8C1C9F1AEC6F6F00B2A24F /* LPMainPageViewCell.h */,
+				6B8C1CA01AEC6F6F00B2A24F /* LPMainPageViewCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -218,6 +242,8 @@
 			children = (
 				2F6BAD161AEBCDBF008A3784 /* LFMainPageView.h */,
 				2F6BAD171AEBCDBF008A3784 /* LFMainPageView.m */,
+				6B8C1C9A1AEC6E7B00B2A24F /* LFMainPagView1.h */,
+				6B8C1C9B1AEC6E7B00B2A24F /* LFMainPagView1.m */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -226,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				2F6BAD1A1AEBCDF3008A3784 /* LFMainPageView.xib */,
+				6B8C1C981AEC6DA400B2A24F /* LFMainPageView1.xib */,
+				6B8C1C9D1AEC6F3F00B2A24F /* LPMainPageViewCell.xib */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -292,6 +320,12 @@
 				6BC013841AEBC30C00848E43 /* BubbleLefthand.png */,
 				6BC013851AEBC30C00848E43 /* BubbleRighthand.png */,
 				2F8DF4091AEB9F8400F5C230 /* Main.storyboard */,
+				6B8C1CA21AEC747200B2A24F /* Companionship.png */,
+				6B8C1CA31AEC747200B2A24F /* Counselling.png */,
+				6B8C1CA41AEC747200B2A24F /* Education.png */,
+				6B8C1CA51AEC747200B2A24F /* Housing.png */,
+				6B8C1CA61AEC747200B2A24F /* Jobs.png */,
+				6B8C1CA71AEC747200B2A24F /* Others.png */,
 				2F8DF40C1AEB9F8400F5C230 /* Images.xcassets */,
 				2F8DF40E1AEB9F8400F5C230 /* LaunchScreen.xib */,
 				2F8DF3FF1AEB9F8400F5C230 /* Supporting Files */,
@@ -566,18 +600,26 @@
 			files = (
 				2F6BAD341AEC0EFA008A3784 /* LostPng.png in Resources */,
 				2F6BAD2F1AEBFBED008A3784 /* Button_Bg.png in Resources */,
+				6B8C1CAD1AEC747200B2A24F /* Others.png in Resources */,
 				2F6BAD111AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib in Resources */,
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
 				2F6BAD0E1AEBC51E008A3784 /* LFItemsListPageView.xib in Resources */,
 				2F8E43D01AEC39A90093FD6D /* LFLoginPageView.xib in Resources */,
+				6B8C1CAC1AEC747200B2A24F /* Jobs.png in Resources */,
 				6B6E09F01AEC46CC009CAC2C /* PostHelpPopupView.xib in Resources */,
+				6B8C1CAA1AEC747200B2A24F /* Education.png in Resources */,
 				2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
+				6B8C1CA91AEC747200B2A24F /* Counselling.png in Resources */,
+				6B8C1C991AEC6DA400B2A24F /* LFMainPageView1.xib in Resources */,
+				6B8C1CA81AEC747200B2A24F /* Companionship.png in Resources */,
 				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
 				2F8E43DE1AEC50520093FD6D /* LFPhoneNumberRegistrationView.xib in Resources */,
+				6B8C1C9E1AEC6F3F00B2A24F /* LPMainPageViewCell.xib in Resources */,
 				6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */,
 				6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */,
 				2F6BAD211AEBE17D008A3784 /* LFChatPageView.xib in Resources */,
+				6B8C1CAB1AEC747200B2A24F /* Housing.png in Resources */,
 				2F6BAD1B1AEBCDF3008A3784 /* LFMainPageView.xib in Resources */,
 				2F8DF40D1AEB9F8400F5C230 /* Images.xcassets in Resources */,
 			);
@@ -601,6 +643,7 @@
 				2FAE710A1AEC11AB00A1EBE9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				2F8E43D71AEC46DC0093FD6D /* ApUtils.m in Sources */,
 				2FAE710F1AEC11AB00A1EBE9 /* UIRefreshControl+AFNetworking.m in Sources */,
+				6B8C1CA11AEC6F6F00B2A24F /* LPMainPageViewCell.m in Sources */,
 				2FAE710C1AEC11AB00A1EBE9 /* UIButton+AFNetworking.m in Sources */,
 				2F8E43C61AEC2B830093FD6D /* ApURLConnection.m in Sources */,
 				2FAE710B1AEC11AB00A1EBE9 /* UIAlertView+AFNetworking.m in Sources */,
@@ -629,6 +672,7 @@
 				2F6BAD181AEBCDBF008A3784 /* LFMainPageView.m in Sources */,
 				2FAE71091AEC11AB00A1EBE9 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2FAE71021AEC11AB00A1EBE9 /* AFHTTPSessionManager.m in Sources */,
+				6B8C1C9C1AEC6E7B00B2A24F /* LFMainPagView1.m in Sources */,
 				2F8E43D41AEC3A780093FD6D /* LFLoginPageView.m in Sources */,
 				2F8E43CD1AEC38B10093FD6D /* LFItemsListPageViewTableViewCell.m in Sources */,
 				2FAE71101AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m in Sources */,

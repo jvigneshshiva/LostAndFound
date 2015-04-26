@@ -28,6 +28,8 @@
 @property (nonatomic) LFPanoramaViewWidgetPage *pageThree;
 @property (nonatomic) PostHelpPopupView *postHelpPopupView;
 
+
+
 @end
 
 @implementation LFMainPageView
