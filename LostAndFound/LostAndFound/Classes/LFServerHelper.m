@@ -45,11 +45,11 @@ typedef enum
 {
     switch (apURLConnection.tag) {
         case CHAT_GET_URL_CONNECTION_TAG:
-            
+            [self.serverHelperDelegate chatDataReceived:str];
             break;
             
         case CHAT_SEND_URL_CONNECTION_TAG:
-            
+            [self.serverHelperDelegate chatSubmittedSuccesfully];
             break;
             
         case ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG:
@@ -78,22 +78,24 @@ typedef enum
     
 }
 
--(void)fetchChatData
+-(void)submitChatMessage:(NSString *)chatMessage receiverId:(NSString *)receiverId andSenderId:(NSString *)senderId;
 {
-    /*
     
     NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"message"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"20put"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&fromUserId="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", senderID]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", senderId]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&toUserId="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", receiverID]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", receiverId]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&text="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", message]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", chatMessage]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&messageType="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", @"0"]]; */
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"0"]];
+    
+    ApURLConnection *chatSubmissionURLConnection =[[ApURLConnection alloc]  initWithURL:CHAT_FETCH_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
+    chatSubmissionURLConnection.tag = CHAT_SEND_URL_CONNECTION_TAG;
 }
 
 -(void)submitUserDataWithDictionary:(NSDictionary *)dictionary

@@ -25,6 +25,8 @@
 
 @property (nonatomic) NSArray *allCategoriesArray;
 @property (nonatomic) NSString *categoryId;
+@property (nonatomic) NSString *receiverId;
+
 
 @end
 
@@ -97,12 +99,36 @@
 
 -(void)submitChatMessage:(NSString *)chatMessage
 {
-    
+    NSString *senderId = [[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"];
+    [self.serverHelper submitChatMessage:chatMessage receiverId:self.receiverId andSenderId:senderId];
+}
+
+-(void)chatSubmittedSuccesfully
+{
+    [self chatSelectedWithUserId:self.receiverId];
+}
+
+-(void)chatDataReceived:(NSString *)str;
+{
+    NSDictionary *dictionary = [str jsonValue];
+    NSString *receiverId = [[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"];
+    NSArray *chatArray = dictionary[@"allMessages"];
+    NSMutableArray *chatInfoArray = [NSMutableArray array];
+    for(NSDictionary *someDictionary in chatArray)
+    {
+        NSMutableDictionary *chatInfoDictionary = [someDictionary mutableCopy];
+        if([someDictionary[@"fromId"] isEqualToString:receiverId])
+        {
+            chatInfoDictionary[@"hasUserSentThisMessage"] = @(YES);
+        }
+        [chatInfoArray addObject:chatInfoDictionary];
+    }
 }
 
 -(void)chatSelectedWithUserId:(NSString *)userId
 {
     NSString *receiverId = [[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"];
+    self.receiverId = userId;
     [self.serverHelper fetchChatFromUser:userId toUser:receiverId];
 
 }
@@ -130,7 +156,8 @@
 
 -(void)itemListReceived:(NSString *)str
 {
-    
+    NSDictionary *dictionary = [str jsonValue];
+    [self.mainPage configureItemListWith:dictionary[@"allServiceItems"]];
 }
 
 -(void)signupSuccessful

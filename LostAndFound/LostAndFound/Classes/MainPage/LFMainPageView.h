@@ -20,5 +20,7 @@
 @interface LFMainPageView : UIView
 
 @property (nonatomic) id<LFMainPageViewProtocol> mainPageViewDelegate;
+-(void)configureItemListWith:(NSArray *)array;
+-(void)configureChatWith:(NSArray *)array;
 
 @end

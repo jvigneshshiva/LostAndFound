@@ -67,6 +67,11 @@
     [self.pageOne addSubviewToDetailView:self.itemsListPageView];
 }
 
+-(void)configureItemListWith:(NSArray *)array
+{
+    [self.itemsListPageView  configureItemListWith:array];
+}
+
 -(void)configurePageTwo
 {
     self.pageTwo = [[LFPanoramaViewWidgetPage alloc]initWithFrame:self.pageViewHolder.frame];
@@ -80,6 +85,11 @@
 -(void)submitChatMessage:(NSString *)chatMessage
 {
     [self.mainPageViewDelegate submitChatMessage:chatMessage];
+}
+
+-(void)configureChatWith:(NSArray *)array
+{
+    [self.chatPageView configureChatMessages:array];
 }
 
 -(void)chatSelectedWithUserId:(NSString *)userId

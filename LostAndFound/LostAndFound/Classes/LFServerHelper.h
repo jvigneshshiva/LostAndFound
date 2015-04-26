@@ -12,10 +12,10 @@
 
 -(void)verificationCodeReceived:(NSString *)verificationCode;
 -(void)userDataSavedSuccessFully;
+-(void)chatSubmittedSuccesfully;
 -(void)allCategoriesFetched:(NSString *)str;
 -(void)itemListReceived:(NSString *)str;
-
-
+-(void)chatDataReceived:(NSString *)str;
 
 @end
 
@@ -29,6 +29,8 @@
 -(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString;
 -(void)fetchItemDataInfoForCategoryId:(NSString *)categoryId;
 -(void)fetchAllCategories;
+-(void)submitChatMessage:(NSString *)chatMessage receiverId:(NSString *)receiverId andSenderId:(NSString *)senderId;
+
 
 @property (nonatomic) id<LFServerHelperProtocol> serverHelperDelegate;
 

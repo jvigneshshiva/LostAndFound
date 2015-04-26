@@ -28,17 +28,7 @@
 
 -(void)configureCellWithDictionary:(NSDictionary *)dictionary
 {
-    NSString *itemStatus = nil;
-    if([dictionary[@"itemStatus"] isEqualToString:@"found"])
-    {
-        itemStatus = NSLocalizedString(@"Found", @"Item Status");
-    }
-    else if([dictionary[@"itemStatus"] isEqualToString:@"lost"])
-    {
-        itemStatus = NSLocalizedString(@"Lost", @"Item Status");
-    }
-    NSString *headerString = [NSString stringWithFormat:@"%@ %@ %@ %@",dictionary[@"name"],itemStatus,dictionary[@"itemName"],dictionary[@"location"]];
-    self.headerLabel.text = headerString;
+    self.headerLabel.text = dictionary[@"description"];
     
 }
 
