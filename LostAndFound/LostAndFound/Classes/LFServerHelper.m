@@ -16,7 +16,8 @@ typedef enum
     ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG,
     USERDATA_SUBMISSION_URL_CONNECTION_TAG,
     PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG,
-    POSTDATA_SUBMISSION_URL_CONNECTION_TAG
+    POSTDATA_SUBMISSION_URL_CONNECTION_TAG,
+    ALL_CATEGORIES_FETCH_CONNECTION_TAG
 }URL_CONNECTION_TYPE;
 
 #define CHAT_FETCH_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
@@ -24,6 +25,8 @@ typedef enum
 #define PHONE_NUMBER_SUBMIT_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
 #define USERDATA_SUBMISSION_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
 #define POSTDATA_SUBMISSION_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
+#define ALL_CATEGORIES_FETCH_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
+
 
 @implementation LFServerHelper
 
@@ -50,7 +53,7 @@ typedef enum
             break;
             
         case ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG:
-            [self.serverHelperDelegate verificationCodeReceived:str];
+            [self.serverHelperDelegate itemListReceived:str];
 
             break;
             
@@ -63,6 +66,10 @@ typedef enum
             break;
             
         case POSTDATA_SUBMISSION_URL_CONNECTION_TAG:
+            break;
+            
+        case ALL_CATEGORIES_FETCH_CONNECTION_TAG:
+            [self.serverHelperDelegate allCategoriesFetched:str];
             break;
             
         default:
@@ -158,10 +165,8 @@ typedef enum
     phoneNumberSubmissionURLConnection.tag = POSTDATA_SUBMISSION_URL_CONNECTION_TAG;
 }
 
--(void)fetchItemData
+-(void)fetchItemDataInfoForCategoryId:(NSString *)categoryId
 {
-    //https://dynamic-chiller-92609.appspot.com/hack?txType=serviceRequest&command=get&categoryId=12
-    NSString *categoryId = nil;//hack
     NSMutableString *postParameter = [NSMutableString stringWithString: @"txType="];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"serviceRequest"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
@@ -170,6 +175,14 @@ typedef enum
     [postParameter appendString:[NSString stringWithFormat:@"%@", categoryId]];
     ApURLConnection *itemFetchConnection =[[ApURLConnection alloc]  initWithURL:POSTDATA_SUBMISSION_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
     itemFetchConnection.tag = ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG;
+}
+
+-(void)fetchAllCategories
+{
+    NSMutableString *postParameter = [NSMutableString stringWithString: @"txType="];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"allCategories"]];
+    ApURLConnection *itemFetchConnection =[[ApURLConnection alloc]  initWithURL:ALL_CATEGORIES_FETCH_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
+    itemFetchConnection.tag = ALL_CATEGORIES_FETCH_CONNECTION_TAG;
 }
 
 

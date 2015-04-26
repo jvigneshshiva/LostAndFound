@@ -12,6 +12,9 @@
 
 -(void)verificationCodeReceived:(NSString *)verificationCode;
 -(void)userDataSavedSuccessFully;
+-(void)allCategoriesFetched:(NSString *)str;
+-(void)itemListReceived:(NSString *)str;
+
 
 
 @end
@@ -24,7 +27,8 @@
 -(void)submitUserDataWithDictionary:(NSDictionary *)dictionary;
 -(void)submitPhoneNumberWith:(NSString *)phoneNumber;
 -(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString;
-
+-(void)fetchItemDataInfoForCategoryId:(NSString *)categoryId;
+-(void)fetchAllCategories;
 
 @property (nonatomic) id<LFServerHelperProtocol> serverHelperDelegate;
 

@@ -13,6 +13,7 @@
 #import "LFServerHelper.h"
 #import "LFPhoneNumberRegistrationView.h"
 #import "UIView+XIB.h"
+#import "NSString+JSON.h"
 
 @interface LFViewController () <LFLoginPageViewProtocol,LFPhoneNumberRegistrationViewProtocol,LFMainPageViewProtocol, LFServerHelperProtocol, LFMainPagView1Protocol>
 
@@ -21,6 +22,9 @@
 @property (nonatomic) LFLoginPageView *logInPage;
 @property (nonatomic) LFMainPageView *mainPage;
 @property (nonatomic) LFPhoneNumberRegistrationView *phoneNumberRegistrationPage;
+
+@property (nonatomic) NSArray *allCategoriesArray;
+@property (nonatomic) NSString *categoryId;
 
 @end
 
@@ -32,7 +36,7 @@
     self.serverHelper.serverHelperDelegate = self;
     [[UIApplication sharedApplication] setStatusBarHidden:YES
                                             withAnimation:UIStatusBarAnimationFade];
-    
+
     if([[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"] == nil)
     {
         [self showPhoneNumberRegistrationPage];
@@ -45,6 +49,7 @@
     {
         [self showMainPage];
     }
+    [self fetchAllCategories];
 
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -52,6 +57,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)fetchAllCategories
+{
+    [self.serverHelper fetchAllCategories];
 }
 
 -(void)showLogInPage
@@ -107,12 +117,18 @@
     self.phoneNumberRegistrationPage.verificationCode = verificationCode;
 }
 
--(void)fetchItemDataInfo
+-(void)fetchItemDataInfoForCategoryId:(NSString *)categoryId
 {
-//    [self.serverHelper fetchItemDataInfo];
+    [self.serverHelper fetchItemDataInfoForCategoryId:categoryId];
 }
 
--(void)itemListReceived:(NSDictionary *)itemList
+-(void)fetchItemDataInfo
+{
+    [self fetchItemDataInfoForCategoryId:self.categoryId];
+}
+
+
+-(void)itemListReceived:(NSString *)str
 {
     
 }
@@ -134,7 +150,13 @@
 
 -(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
 {
-    
+    [self.serverHelper postMadeTitle:postTitle andDescription:descriptionString];
+}
+
+-(void)allCategoriesFetched:(NSString *)str
+{
+    NSDictionary *dictionary = [str jsonValue];
+    self.allCategoriesArray = dictionary[@"allCategoryItems"];
 }
 
 -(void)cellClicked:(NSString *)categoryName
