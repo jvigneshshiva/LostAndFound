@@ -72,6 +72,7 @@
 		6B8C1CAB1AEC747200B2A24F /* Housing.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA51AEC747200B2A24F /* Housing.png */; };
 		6B8C1CAC1AEC747200B2A24F /* Jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA61AEC747200B2A24F /* Jobs.png */; };
 		6B8C1CAD1AEC747200B2A24F /* Others.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA71AEC747200B2A24F /* Others.png */; };
+		6B8C1CAF1AEC782300B2A24F /* Banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1CAE1AEC782300B2A24F /* Banner.jpg */; };
 		6BC013861AEBC30C00848E43 /* BubbleLefthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013841AEBC30C00848E43 /* BubbleLefthand.png */; };
 		6BC013871AEBC30C00848E43 /* BubbleRighthand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC013851AEBC30C00848E43 /* BubbleRighthand.png */; };
 /* End PBXBuildFile section */
@@ -199,6 +200,7 @@
 		6B8C1CA51AEC747200B2A24F /* Housing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Housing.png; sourceTree = "<group>"; };
 		6B8C1CA61AEC747200B2A24F /* Jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jobs.png; sourceTree = "<group>"; };
 		6B8C1CA71AEC747200B2A24F /* Others.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Others.png; sourceTree = "<group>"; };
+		6B8C1CAE1AEC782300B2A24F /* Banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Banner.jpg; sourceTree = "<group>"; };
 		6BC013841AEBC30C00848E43 /* BubbleLefthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleLefthand.png; sourceTree = "<group>"; };
 		6BC013851AEBC30C00848E43 /* BubbleRighthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleRighthand.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -371,6 +373,7 @@
 		2F8DF4251AEBA61200F5C230 /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				6B8C1CAE1AEC782300B2A24F /* Banner.jpg */,
 				2F6BAD301AEC0740008A3784 /* AllInOneView.h */,
 				2F6BAD311AEC0740008A3784 /* AllInOneView.m */,
 				2F6BAD2A1AEBECB0008A3784 /* SpeechBubbleView.h */,
@@ -620,6 +623,7 @@
 				2F8DF40B1AEB9F8400F5C230 /* Main.storyboard in Resources */,
 				2F6BAD0E1AEBC51E008A3784 /* LFItemsListPageView.xib in Resources */,
 				2F8E43D01AEC39A90093FD6D /* LFLoginPageView.xib in Resources */,
+				6B8C1CAF1AEC782300B2A24F /* Banner.jpg in Resources */,
 				6B8C1CAC1AEC747200B2A24F /* Jobs.png in Resources */,
 				6B6E09F01AEC46CC009CAC2C /* PostHelpPopupView.xib in Resources */,
 				6B8C1CAA1AEC747200B2A24F /* Education.png in Resources */,
