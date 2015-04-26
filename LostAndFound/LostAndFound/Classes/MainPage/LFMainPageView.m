@@ -15,7 +15,7 @@
 
 #import "UIView+XIB.h"
 
-@interface LFMainPageView()<LFChatPageViewProtocol>
+@interface LFMainPageView()<LFItemsListPageViewProtocol, LFChatPageViewProtocol , PostHelpPopupViewProtocol>
 
 @property (weak, nonatomic) IBOutlet UIView *panoramaViewHolder;
 @property (weak, nonatomic) IBOutlet UIView *pageViewHolder;
@@ -60,6 +60,7 @@
     [self.pageOne setHeadingToView:@"News"];
     [self.mainPageViewDelegate fetchItemDataInfo];
     self.itemsListPageView = [[LFItemsListPageView alloc]initWithFrame:[self.pageOne detailViewBounds]];
+    self.itemsListPageView.itemsListPageViewDelegate = self;
     [self.itemsListPageView  configureItemListWith:nil];
     [self.pageOne addSubviewToDetailView:self.itemsListPageView];
 }
@@ -88,6 +89,7 @@
 {
     self.postHelpPopupView = [[PostHelpPopupView alloc]initWithFrame:CGRectMake(0, 0, 300, 381)];
     self.postHelpPopupView.center = self.center;
+    self.postHelpPopupView.postHelpPopupDelegate = self;
     [self addSubview:self.postHelpPopupView];
 }
 
