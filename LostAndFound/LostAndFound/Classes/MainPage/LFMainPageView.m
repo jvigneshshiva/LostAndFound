@@ -108,13 +108,18 @@
 -(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
 {
     [self.mainPageViewDelegate postMadeTitle:postTitle andDescription:descriptionString];
-    [self postHelpPopupView];
+    [self postHelpPopupClosed];
 }
 
 -(void)postHelpPopupClosed
 {
     [self.postHelpPopupView removeFromSuperview];
     self.postHelpPopupView = nil;
+    [self.mainPageViewDelegate fetchItemDataInfo];
+}
+- (IBAction)backButtonClicked:(id)sender
+{
+    [self.mainPageViewDelegate backButtonClicked];
 }
 
 /*

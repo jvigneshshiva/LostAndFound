@@ -26,7 +26,7 @@
 -(void)fetchChatFromUser:(NSString *)senderID toUser:(NSString *)receiverID;
 -(void)submitUserDataWithDictionary:(NSDictionary *)dictionary;
 -(void)submitPhoneNumberWith:(NSString *)phoneNumber;
--(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString;
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString andCategoryId:(NSString *)categoryId;
 -(void)fetchItemDataInfoForCategoryId:(NSString *)categoryId;
 -(void)fetchAllCategories;
 -(void)submitChatMessage:(NSString *)chatMessage receiverId:(NSString *)receiverId andSenderId:(NSString *)senderId;

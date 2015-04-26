@@ -21,6 +21,7 @@
 
 @property (nonatomic) LFLoginPageView *logInPage;
 @property (nonatomic) LFMainPageView *mainPage;
+@property (nonatomic) LFMainPagView1 *mainPage1;
 @property (nonatomic) LFPhoneNumberRegistrationView *phoneNumberRegistrationPage;
 
 @property (nonatomic) NSArray *allCategoriesArray;
@@ -49,7 +50,7 @@
     }
     else
     {
-        [self showMainPage];
+        [self showMainPage1];
     }
     [self fetchAllCategories];
 
@@ -81,6 +82,13 @@
     [self.view addSubview:self.mainPage];
 }
 
+-(void)showMainPage1
+{
+    self.mainPage1 = [[LFMainPagView1 alloc]initWithFrame:self.view.frame andCategoryInfoArray:self.allCategoriesArray];
+    self.mainPage1.delegate = self;
+    [self.view addSubview:self.mainPage1];
+}
+
 -(void)showPhoneNumberRegistrationPage
 {
     self.phoneNumberRegistrationPage = [[LFPhoneNumberRegistrationView alloc]initWithFrame:self.view.frame];
@@ -94,6 +102,7 @@
     NSMutableDictionary *userDataDictionary = [dictionary mutableCopy];
     userDataDictionary[@"phoneNumber"] = phoneNumber;
     [self.serverHelper submitUserDataWithDictionary:userDataDictionary];
+    [self userDataSavedSuccessFully];
 
 }
 
@@ -172,23 +181,40 @@
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"userDataStoredSuccessfully"];
     [self.logInPage removeFromSuperview];
     self.logInPage = nil;
-    [self showMainPage];
+    [self showMainPage1];
 }
 
 -(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
 {
-    [self.serverHelper postMadeTitle:postTitle andDescription:descriptionString];
+    [self.serverHelper postMadeTitle:postTitle andDescription:descriptionString andCategoryId:self.categoryId];
 }
 
 -(void)allCategoriesFetched:(NSString *)str
 {
     NSDictionary *dictionary = [str jsonValue];
     self.allCategoriesArray = dictionary[@"allCategoryItems"];
+    [self.mainPage1 configureWithArray:self.allCategoriesArray];
 }
 
 -(void)cellClicked:(NSString *)categoryName
 {
-    //server
+    self.categoryId = categoryName;
+    [self closeMainPage1];
+    [self showMainPage];
+}
+
+-(void)closeMainPage1
+{
+    [self.mainPage1 removeFromSuperview];
+    self.mainPage1 = nil;
+}
+
+-(void)backButtonClicked
+{
+    [self.mainPage removeFromSuperview];
+    self.mainPage = nil;
+    [self showMainPage1];
+    
 }
 
 @end

@@ -7,7 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LFPhoneNumberRegistrationView">
             <connections>
                 <outlet property="phoneNumberTextBox" destination="JoM-Bs-q15" id="Ciz-gA-s8C"/>
+                <outlet property="phoneNumberView" destination="eaZ-il-tUw" id="a5K-Zd-bGw"/>
                 <outlet property="verficationCodeTextBox" destination="uC9-3U-qRt" id="E5x-es-dPP"/>
+                <outlet property="verficationCodeView" destination="2vy-2I-7jd" id="rcr-il-Oxv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,7 +25,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W4i-cD-3nm">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W4i-cD-3nm">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -38,64 +40,78 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" clearButtonMode="whileEditing" id="JoM-Bs-q15">
-                            <rect key="frame" x="22" y="100" width="255" height="30"/>
+                        <view contentMode="scaleToFill" id="eaZ-il-tUw" userLabel="Enter your Phone Number View">
+                            <rect key="frame" x="0.0" y="50" width="300" height="115"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                        </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" minimumFontSize="17" clearButtonMode="whileEditing" id="uC9-3U-qRt">
-                            <rect key="frame" x="22" y="239" width="255" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hen-fC-uPU">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.71372549019999998" green="0.71372549019999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" clearButtonMode="whileEditing" id="JoM-Bs-q15">
+                                    <rect key="frame" x="22" y="39" width="255" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kfS-XS-d7h" userLabel="Submit - Phone">
+                                    <rect key="frame" x="115" y="85" width="70" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Submit">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="phoneNumberSubmitted" destination="-1" eventType="touchUpInside" id="fnt-hs-tDZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view alpha="0.0" contentMode="scaleToFill" id="2vy-2I-7jd" userLabel="Verification Code View">
+                            <rect key="frame" x="0.0" y="50" width="300" height="115"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                        </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LAc-p2-ls4" userLabel="Submit - Code">
-                            <rect key="frame" x="115" y="297" width="70" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Submit">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="verificationCodeSubmitted" destination="-1" eventType="touchUpInside" id="sJR-1P-OqQ"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kfS-XS-d7h" userLabel="Submit - Phone">
-                            <rect key="frame" x="115" y="146" width="70" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Submit">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="phoneNumberSubmitted" destination="-1" eventType="touchUpInside" id="fnt-hs-tDZ"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hen-fC-uPU">
-                            <rect key="frame" x="0.0" y="55" width="300" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" red="0.71372549019999998" green="0.71372549019999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Verification Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uwD-8i-0Tj">
-                            <rect key="frame" x="0.0" y="192" width="300" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" red="0.71372549019999998" green="0.71372549019999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Verification Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uwD-8i-0Tj">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.71372549019999998" green="0.71372549019999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" minimumFontSize="17" clearButtonMode="whileEditing" id="uC9-3U-qRt">
+                                    <rect key="frame" x="22" y="39" width="255" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LAc-p2-ls4" userLabel="Submit - Code">
+                                    <rect key="frame" x="115" y="80" width="70" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Submit">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="verificationCodeSubmitted" destination="-1" eventType="touchUpInside" id="sJR-1P-OqQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
@@ -104,6 +120,17 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" id="iG0-wI-D0V" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner.jpg" id="Hw9-WH-HKY">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -111,6 +138,9 @@
             <point key="canvasLocation" x="245" y="323"/>
         </view>
     </objects>
+    <resources>
+        <image name="Banner.jpg" width="640" height="207"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

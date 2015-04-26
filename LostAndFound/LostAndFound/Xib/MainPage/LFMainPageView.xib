@@ -16,11 +16,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="YN2-dB-KPg" userLabel="Panorama View Holder">
-                    <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                    <rect key="frame" x="0.0" y="103" width="320" height="468"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="vr8-ga-0BE" userLabel="Page View Holder">
-                            <rect key="frame" x="0.0" y="0.0" width="280" height="518"/>
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="468"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -28,16 +28,25 @@
                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="7LM-gA-jFa" userLabel="Header View">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lost And Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Exp-sC-uMR">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner.jpg" id="s96-eC-rAS">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cNk-S7-iBN">
+                            <rect key="frame" x="8" y="73" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="&lt;-">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="bja-Hh-pfP"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
@@ -48,6 +57,9 @@
             <point key="canvasLocation" x="245" y="323"/>
         </view>
     </objects>
+    <resources>
+        <image name="Banner.jpg" width="640" height="207"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

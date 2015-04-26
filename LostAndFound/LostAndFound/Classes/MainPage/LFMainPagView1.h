@@ -18,4 +18,8 @@
 
 @property (nonatomic, weak) id<LFMainPagView1Protocol> delegate;
 
+- (id)initWithFrame:(CGRect)frame andCategoryInfoArray:(NSArray *)array;
+-(void)configureWithArray:(NSArray *)array;
+
+
 @end

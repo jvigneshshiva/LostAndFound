@@ -149,7 +149,7 @@ typedef enum
     phoneNumberSubmissionURLConnection.tag = PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG;
 }
 
--(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString andCategoryId:(NSString *)categoryId
 {
     
     NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
@@ -161,7 +161,7 @@ typedef enum
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&description="]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", descriptionString]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&categoryId="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", @"12"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", categoryId]];
     
     ApURLConnection *phoneNumberSubmissionURLConnection =[[ApURLConnection alloc]  initWithURL:POSTDATA_SUBMISSION_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
     phoneNumberSubmissionURLConnection.tag = POSTDATA_SUBMISSION_URL_CONNECTION_TAG;

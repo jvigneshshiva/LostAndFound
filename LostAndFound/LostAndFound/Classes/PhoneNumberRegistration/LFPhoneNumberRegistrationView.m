@@ -12,6 +12,8 @@
 @interface LFPhoneNumberRegistrationView()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextBox;
 @property (weak, nonatomic) IBOutlet UITextField *verficationCodeTextBox;
+@property (weak, nonatomic) IBOutlet UIView *phoneNumberView;
+@property (weak, nonatomic) IBOutlet UIView *verficationCodeView;
 
 @property (nonatomic) NSString *phoneNumberText;
 
@@ -44,6 +46,10 @@
         self.phoneNumberText = self.phoneNumberTextBox.text;
         [self.phoneNumberRegistrationViewDelegate submitPhoneNumberWith:self.phoneNumberTextBox.text];
     }
+    [UIView animateWithDuration:1.0 animations:^{
+        self.phoneNumberView.alpha = 0;
+        self.verficationCodeView.alpha = 1;
+    }];
 }
 
 -(BOOL)canPhoneNumberBeSubmitted

@@ -14,6 +14,7 @@
 -(void)chatSelectedWithUserId:(NSString *)userId;
 -(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString;
 -(void)fetchItemDataInfo;
+-(void)backButtonClicked;
 
 @end
 

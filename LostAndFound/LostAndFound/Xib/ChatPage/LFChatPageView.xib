@@ -12,11 +12,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="280" height="458"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="408"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="xWu-BW-goZ">
-                    <rect key="frame" x="15" y="0.0" width="265" height="407"/>
+                    <rect key="frame" x="15" y="0.0" width="265" height="363"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
@@ -26,13 +26,13 @@
                     </connections>
                 </tableView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" id="EIq-og-gM6">
-                    <rect key="frame" x="15" y="421" width="223" height="30"/>
+                    <rect key="frame" x="15" y="378" width="223" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uT0-Yg-gRf">
-                    <rect key="frame" x="234" y="421" width="46" height="30"/>
+                    <rect key="frame" x="234" y="378" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>

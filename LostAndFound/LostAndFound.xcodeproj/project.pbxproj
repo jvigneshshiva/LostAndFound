@@ -62,7 +62,7 @@
 		2FAE711A1AEC25A100A1EBE9 /* LFServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */; };
 		6B6E09F01AEC46CC009CAC2C /* PostHelpPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */; };
 		6B8C1C971AEC519700B2A24F /* PostHelpPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */; };
-		6B8C1C991AEC6DA400B2A24F /* LFMainPageView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1C981AEC6DA400B2A24F /* LFMainPageView1.xib */; };
+		6B8C1C991AEC6DA400B2A24F /* LFMainPagView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1C981AEC6DA400B2A24F /* LFMainPagView1.xib */; };
 		6B8C1C9C1AEC6E7B00B2A24F /* LFMainPagView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1C9B1AEC6E7B00B2A24F /* LFMainPagView1.m */; };
 		6B8C1C9E1AEC6F3F00B2A24F /* LPMainPageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8C1C9D1AEC6F3F00B2A24F /* LPMainPageViewCell.xib */; };
 		6B8C1CA11AEC6F6F00B2A24F /* LPMainPageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1CA01AEC6F6F00B2A24F /* LPMainPageViewCell.m */; };
@@ -188,7 +188,7 @@
 		6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostHelpPopupView.xib; path = ../PostHelpPopupView.xib; sourceTree = "<group>"; };
 		6B8C1C951AEC519700B2A24F /* PostHelpPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHelpPopupView.h; sourceTree = "<group>"; };
 		6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpPopupView.m; sourceTree = "<group>"; };
-		6B8C1C981AEC6DA400B2A24F /* LFMainPageView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFMainPageView1.xib; sourceTree = "<group>"; };
+		6B8C1C981AEC6DA400B2A24F /* LFMainPagView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFMainPagView1.xib; sourceTree = "<group>"; };
 		6B8C1C9A1AEC6E7B00B2A24F /* LFMainPagView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMainPagView1.h; sourceTree = "<group>"; };
 		6B8C1C9B1AEC6E7B00B2A24F /* LFMainPagView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMainPagView1.m; sourceTree = "<group>"; };
 		6B8C1C9D1AEC6F3F00B2A24F /* LPMainPageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPMainPageViewCell.xib; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				2F6BAD1A1AEBCDF3008A3784 /* LFMainPageView.xib */,
-				6B8C1C981AEC6DA400B2A24F /* LFMainPageView1.xib */,
+				6B8C1C981AEC6DA400B2A24F /* LFMainPagView1.xib */,
 				6B8C1C9D1AEC6F3F00B2A24F /* LPMainPageViewCell.xib */,
 			);
 			path = MainPage;
@@ -630,7 +630,7 @@
 				2F6BAD291AEBE2BA008A3784 /* LFChatPageTableViewCell.xib in Resources */,
 				2F8DF4101AEB9F8400F5C230 /* LaunchScreen.xib in Resources */,
 				6B8C1CA91AEC747200B2A24F /* Counselling.png in Resources */,
-				6B8C1C991AEC6DA400B2A24F /* LFMainPageView1.xib in Resources */,
+				6B8C1C991AEC6DA400B2A24F /* LFMainPagView1.xib in Resources */,
 				6B8C1CA81AEC747200B2A24F /* Companionship.png in Resources */,
 				2F8DF4311AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib in Resources */,
 				2F8E43DE1AEC50520093FD6D /* LFPhoneNumberRegistrationView.xib in Resources */,
