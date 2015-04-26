@@ -50,7 +50,8 @@ typedef enum
             break;
             
         case ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG:
-            
+            [self.serverHelperDelegate verificationCodeReceived:str];
+
             break;
             
         case USERDATA_SUBMISSION_URL_CONNECTION_TAG:
@@ -145,16 +146,30 @@ typedef enum
     NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"serviceRequest"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", @"get"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"put"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&name="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", @"get"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", postTitle]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&description="]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", descriptionString]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&categoryId="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", postTitle]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"12"]];
     
     ApURLConnection *phoneNumberSubmissionURLConnection =[[ApURLConnection alloc]  initWithURL:POSTDATA_SUBMISSION_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
     phoneNumberSubmissionURLConnection.tag = POSTDATA_SUBMISSION_URL_CONNECTION_TAG;
+}
+
+-(void)fetchItemData
+{
+    //https://dynamic-chiller-92609.appspot.com/hack?txType=serviceRequest&command=get&categoryId=12
+    NSString *categoryId = nil;//hack
+    NSMutableString *postParameter = [NSMutableString stringWithString: @"txType="];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"serviceRequest"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"get"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&categoryId="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", categoryId]];
+    ApURLConnection *itemFetchConnection =[[ApURLConnection alloc]  initWithURL:POSTDATA_SUBMISSION_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
+    itemFetchConnection.tag = ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG;
 }
 
 

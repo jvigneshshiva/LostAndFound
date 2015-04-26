@@ -31,20 +31,19 @@
     self.serverHelper.serverHelperDelegate = self;
     [[UIApplication sharedApplication] setStatusBarHidden:YES
                                             withAnimation:UIStatusBarAnimationFade];
-    [self showPostingPage];
     
-//    if([[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"] == nil)
-//    {
-//        [self showPhoneNumberRegistrationPage];
-//    }
-//    else if([[NSUserDefaults standardUserDefaults]boolForKey:@"userDataStoredSuccessfully"] == NO)
-//    {
-//        [self showLogInPage];
-//    }
-//    else
-//    {
-//        [self showMainPage];
-//    }
+    if([[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"] == nil)
+    {
+        [self showPhoneNumberRegistrationPage];
+    }
+    else if([[NSUserDefaults standardUserDefaults]boolForKey:@"userDataStoredSuccessfully"] == NO)
+    {
+        [self showLogInPage];
+    }
+    else
+    {
+        [self showMainPage];
+    }
 
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -92,7 +91,7 @@
 
 -(void)chatSelectedWithUserId:(NSString *)userId
 {
-    NSString *receiverId = [[NSUserDefaults standardUserDefaults]objectForKey:@"userId"];
+    NSString *receiverId = [[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"];
     [self.serverHelper fetchChatFromUser:userId toUser:receiverId];
 
 }
@@ -105,6 +104,16 @@
 -(void)verificationCodeReceived:(NSString *)verificationCode
 {
     self.phoneNumberRegistrationPage.verificationCode = verificationCode;
+}
+
+-(void)fetchItemDataInfo
+{
+//    [self.serverHelper fetchItemDataInfo];
+}
+
+-(void)itemListReceived:(NSDictionary *)itemList
+{
+    
 }
 
 -(void)signupSuccessful
