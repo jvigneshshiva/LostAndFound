@@ -23,6 +23,8 @@
 -(void)fetchChatFromUser:(NSString *)senderID toUser:(NSString *)receiverID;
 -(void)submitUserDataWithDictionary:(NSDictionary *)dictionary;
 -(void)submitPhoneNumberWith:(NSString *)phoneNumber;
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString;
+
 
 @property (nonatomic) id<LFServerHelperProtocol> serverHelperDelegate;
 

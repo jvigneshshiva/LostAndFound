@@ -60,6 +60,13 @@
     NSDictionary *itemInfoDictionary = self.itemsListArray[indexPath.row];
     [self.itemsListPageViewDelegate chatSelectedWithUserId:itemInfoDictionary[@"userId"]];
 }
+
+- (IBAction)postButtonClicked
+{
+    [self.itemsListPageViewDelegate postButtonClicked];
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

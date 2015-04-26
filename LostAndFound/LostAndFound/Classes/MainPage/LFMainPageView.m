@@ -11,6 +11,7 @@
 #import "LFPanoramaViewWidgetPage.h"
 #import "LFItemsListPageView.h"
 #import "LFChatPageView.h"
+#import "PostHelpPopupView.h"
 
 #import "UIView+XIB.h"
 
@@ -25,6 +26,7 @@
 @property (nonatomic) LFPanoramaViewWidgetPage *pageOne;
 @property (nonatomic) LFPanoramaViewWidgetPage *pageTwo;
 @property (nonatomic) LFPanoramaViewWidgetPage *pageThree;
+@property (nonatomic) PostHelpPopupView *postHelpPopupView;
 
 @end
 
@@ -82,7 +84,24 @@
     [self.mainPageViewDelegate chatSelectedWithUserId:userId];
 }
 
+-(void)postButtonClicked
+{
+    self.postHelpPopupView = [[PostHelpPopupView alloc]initWithFrame:CGRectMake(0, 0, 300, 381)];
+    self.postHelpPopupView.center = self.center;
+    [self addSubview:self.postHelpPopupView];
+}
 
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
+{
+    [self.mainPageViewDelegate postMadeTitle:postTitle andDescription:descriptionString];
+    [self postHelpPopupView];
+}
+
+-(void)postHelpPopupClosed
+{
+    [self.postHelpPopupView removeFromSuperview];
+    self.postHelpPopupView = nil;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

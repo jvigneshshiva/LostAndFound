@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PostHelpPopupViewProtocol <NSObject>
+
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString;
+-(void)postHelpPopupClosed;
+
+@end
+
 @interface PostHelpPopupView : UIView
+
+@property (nonatomic) id<PostHelpPopupViewProtocol> postHelpPopupDelegate;
 
 @end

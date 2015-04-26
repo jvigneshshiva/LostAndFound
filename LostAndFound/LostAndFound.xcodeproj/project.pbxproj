@@ -165,7 +165,7 @@
 		2FAE70FF1AEC11AB00A1EBE9 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		2FAE71181AEC25A100A1EBE9 /* LFServerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFServerHelper.h; sourceTree = "<group>"; };
 		2FAE71191AEC25A100A1EBE9 /* LFServerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFServerHelper.m; sourceTree = "<group>"; };
-		6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostHelpPopupView.xib; sourceTree = "<group>"; };
+		6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostHelpPopupView.xib; path = ../PostHelpPopupView.xib; sourceTree = "<group>"; };
 		6B8C1C951AEC519700B2A24F /* PostHelpPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHelpPopupView.h; sourceTree = "<group>"; };
 		6B8C1C961AEC519700B2A24F /* PostHelpPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpPopupView.m; sourceTree = "<group>"; };
 		6BC013841AEBC30C00848E43 /* BubbleLefthand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleLefthand.png; sourceTree = "<group>"; };
@@ -206,6 +206,7 @@
 		2F6BAD0C1AEBC510008A3784 /* ItemsListPage */ = {
 			isa = PBXGroup;
 			children = (
+				6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */,
 				2F6BAD0D1AEBC51E008A3784 /* LFItemsListPageView.xib */,
 				2F6BAD101AEBC696008A3784 /* LFItemsListPageViewTableViewCell.xib */,
 			);
@@ -351,7 +352,6 @@
 				2F6BAD191AEBCDD9008A3784 /* MainPage */,
 				2F6BAD0C1AEBC510008A3784 /* ItemsListPage */,
 				2F8DF4301AEBB93B00F5C230 /* LFPanoramaViewWidgetPage.xib */,
-				6B6E09EF1AEC46CC009CAC2C /* PostHelpPopupView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";

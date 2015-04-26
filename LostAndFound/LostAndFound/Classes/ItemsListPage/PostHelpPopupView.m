@@ -50,12 +50,13 @@
 
 -(IBAction)postButtonClicked
 {
+    [self.postHelpPopupDelegate postMadeTitle:self.titleTextField.text andDescription:self.descriptionTextView.text];
     
 }
 
 -(IBAction)backButtonClicked
 {
-    
+    [self.postHelpPopupDelegate postHelpPopupClosed];
 }
 
 @end

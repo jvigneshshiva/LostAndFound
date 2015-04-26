@@ -31,18 +31,20 @@
     self.serverHelper.serverHelperDelegate = self;
     [[UIApplication sharedApplication] setStatusBarHidden:YES
                                             withAnimation:UIStatusBarAnimationFade];
-    if([[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"] == nil)
-    {
-        [self showPhoneNumberRegistrationPage];
-    }
-    else if([[NSUserDefaults standardUserDefaults]boolForKey:@"userDataStoredSuccessfully"] == NO)
-    {
-        [self showLogInPage];
-    }
-    else
-    {
-        [self showMainPage];
-    }
+    [self showPostingPage];
+    
+//    if([[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"] == nil)
+//    {
+//        [self showPhoneNumberRegistrationPage];
+//    }
+//    else if([[NSUserDefaults standardUserDefaults]boolForKey:@"userDataStoredSuccessfully"] == NO)
+//    {
+//        [self showLogInPage];
+//    }
+//    else
+//    {
+//        [self showMainPage];
+//    }
 
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -58,10 +60,6 @@
     self.logInPage.loginPageViewDelegate = self;
     [self.view addSubview:self.logInPage];
     
-    LFLoginPageView *logInPage = [[LFLoginPageView alloc]initWithFrame:self.view.frame];
-    logInPage.loginPageViewDelegate = self;
-//    [self.view addSubview:logInPage];
-    [self.view addSubViewWithXibName:@"ItemStateView" andFrame:CGRectMake(0, 15, 320, 450)];
 }
 
 -(void)showMainPage
@@ -122,6 +120,11 @@
     [self.logInPage removeFromSuperview];
     self.logInPage = nil;
     [self showMainPage];
+}
+
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
+{
+    
 }
 
 @end

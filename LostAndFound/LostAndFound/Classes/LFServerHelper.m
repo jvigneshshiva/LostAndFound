@@ -15,13 +15,15 @@ typedef enum
     CHAT_SEND_URL_CONNECTION_TAG,
     ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG,
     USERDATA_SUBMISSION_URL_CONNECTION_TAG,
-    PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG
+    PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG,
+    POSTDATA_SUBMISSION_URL_CONNECTION_TAG
 }URL_CONNECTION_TYPE;
 
 #define CHAT_FETCH_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
 #define ITEM_LIST_DATA_FETCH @"https://dynamic-chiller-92609.appspot.com/hack?"
 #define PHONE_NUMBER_SUBMIT_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
 #define USERDATA_SUBMISSION_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
+#define POSTDATA_SUBMISSION_URL @"https://dynamic-chiller-92609.appspot.com/hack?"
 
 @implementation LFServerHelper
 
@@ -57,6 +59,9 @@ typedef enum
             
         case PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG:
             [self.serverHelperDelegate verificationCodeReceived:str];
+            break;
+            
+        case POSTDATA_SUBMISSION_URL_CONNECTION_TAG:
             break;
             
         default:
@@ -132,6 +137,24 @@ typedef enum
     [postParameter appendString:[NSString stringWithFormat:@"%@", phoneNumber]];
     ApURLConnection *phoneNumberSubmissionURLConnection =[[ApURLConnection alloc]  initWithURL:PHONE_NUMBER_SUBMIT_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
     phoneNumberSubmissionURLConnection.tag = PHONE_NUMBER_SUBMIT_URL_CONNECTION_TAG;
+}
+
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString
+{
+    
+    NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"serviceRequest"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"get"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&name="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"get"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&description="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", descriptionString]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"&categoryId="]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", postTitle]];
+    
+    ApURLConnection *phoneNumberSubmissionURLConnection =[[ApURLConnection alloc]  initWithURL:POSTDATA_SUBMISSION_URL withDelegate:self withOnlyCheck:FALSE withData:postParameter];
+    phoneNumberSubmissionURLConnection.tag = POSTDATA_SUBMISSION_URL_CONNECTION_TAG;
 }
 
 

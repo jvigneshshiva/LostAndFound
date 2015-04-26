@@ -12,6 +12,7 @@
 
 -(void)submitChatMessage:(NSString *)chatMessage;
 -(void)chatSelectedWithUserId:(NSString *)userId;
+-(void)postMadeTitle:(NSString *)postTitle andDescription:(NSString *)descriptionString;
 -(void)fetchItemDataInfo;
 
 @end

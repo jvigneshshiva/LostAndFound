@@ -11,6 +11,7 @@
 @protocol LFItemsListPageViewProtocol <NSObject>
 
 -(void)chatSelectedWithUserId:(NSString *)userId;
+-(void)postButtonClicked;
 
 @end
 
