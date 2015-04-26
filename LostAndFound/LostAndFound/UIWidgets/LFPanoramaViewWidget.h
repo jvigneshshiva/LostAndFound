@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwipeView.h"
 
 // This widget has a dependency of SwipeView
 
 @interface LFPanoramaViewWidget : UIView
 
 -(instancetype)initWithFrame:(CGRect)frame andViewsArray:(NSArray *)viewsArray;
+@property (nonatomic, strong) SwipeView *swipeView;
+
 
 @end

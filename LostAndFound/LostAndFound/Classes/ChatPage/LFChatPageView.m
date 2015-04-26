@@ -15,7 +15,7 @@
 @interface LFChatPageView()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *chatMessagesTableView;
-@property (nonatomic) NSArray *chatMessagesArray;
+@property (nonatomic) NSMutableArray *chatMessagesArray;
 @property (weak, nonatomic) IBOutlet UITextField *chatTextField;
 
 @end
@@ -28,6 +28,7 @@
     if(self)
     {
         [self addSubViewWithXibName:NSStringFromClass([self class]) andFrame:self.bounds];
+        self.chatMessagesArray = [[NSMutableArray alloc]init];
         [self.chatMessagesTableView registerNib:[UINib nibWithNibName:@"LFChatPageTableViewCell" bundle:nil] forCellReuseIdentifier:@"LFChatPageTableViewCell"];
     }
     return self;
@@ -53,8 +54,12 @@
 
 -(void)configureChatMessages:(NSArray *)chatMessagesArray
 {
-    self.chatMessagesArray = chatMessagesArray;
-    [self.chatMessagesTableView reloadData];
+    if(chatMessagesArray.count > 0)
+    {
+        self.chatMessagesArray = [chatMessagesArray mutableCopy];
+        [self.chatMessagesTableView reloadData];
+    }
+
 }
 
 - (IBAction)sendButtonPressed
@@ -62,8 +67,20 @@
     if([self canChatMessageBeSent] == YES)
     {
         [self.chatPageViewDelegate submitChatMessage:self.chatTextField.text];
+        [self addMessage:self.chatTextField.text];
     }
 
+}
+
+-(void)addMessage:(NSString *)string
+{
+    NSDictionary *dictionary = @{
+                                 @"text" : string,
+                                 @"hasUserSentThisMessage" : @(YES)
+                                 };
+    [self.chatMessagesArray addObject:dictionary];
+    [self.chatMessagesTableView reloadData];
+    self.chatTextField.text = nil;
 }
 
 -(BOOL)canChatMessageBeSent

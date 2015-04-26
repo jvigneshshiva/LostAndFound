@@ -55,7 +55,6 @@
     self.speechBubbleView.contentMode = UIViewContentModeRedraw;
     self.speechBubbleView.autoresizingMask = 0;
     [self.contentView addSubview:self.speechBubbleView];
-    self.userNameLabel.text = dictionary[@"userName"];
     self.messageLabel.text = dictionary[@"text"];
     
     if([dictionary[@"hasUserSentThisMessage"] boolValue] == true)
@@ -64,7 +63,7 @@
     }
     else
     {
-        [self.speechBubbleView setText:dictionary[@"message"] bubbleType:BubbleTypeLefthand];
+        [self.speechBubbleView setText:dictionary[@"text"] bubbleType:BubbleTypeLefthand];
 
     }
 

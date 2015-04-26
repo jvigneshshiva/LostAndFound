@@ -84,7 +84,7 @@ typedef enum
     NSMutableString *postParameter = [NSMutableString stringWithFormat:@"%@", @"txType="];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"message"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
-    [postParameter appendString:[NSString stringWithFormat:@"%@", @"20put"]];
+    [postParameter appendString:[NSString stringWithFormat:@"%@", @"put"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&fromUserId="]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", senderId]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&toUserId="]];

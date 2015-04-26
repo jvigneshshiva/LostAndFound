@@ -7,11 +7,9 @@
 //
 
 #import "LFPanoramaViewWidget.h"
-#import "SwipeView.h"
 
 @interface LFPanoramaViewWidget()<SwipeViewDelegate,SwipeViewDataSource>
 
-@property (nonatomic, strong) SwipeView *swipeView;
 @property (nonatomic) NSArray *viewsArray;
 
 @end

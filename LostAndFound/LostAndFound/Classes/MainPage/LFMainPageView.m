@@ -40,7 +40,6 @@
     if(self)
     {
         [self addSubViewWithXibName:NSStringFromClass([self class]) andFrame:self.bounds];
-        [self configurePanoramaView];
     }
     return self;
     
@@ -89,6 +88,7 @@
 
 -(void)configureChatWith:(NSArray *)array
 {
+    [self.panoramaView.swipeView scrollToPage:1 duration:0];
     [self.chatPageView configureChatMessages:array];
 }
 

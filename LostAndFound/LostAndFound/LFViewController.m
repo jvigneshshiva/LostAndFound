@@ -79,6 +79,7 @@
 {
     self.mainPage = [[LFMainPageView alloc]initWithFrame:self.view.frame];
     self.mainPage.mainPageViewDelegate = self;
+    [self.mainPage configurePanoramaView];
     [self.view addSubview:self.mainPage];
 }
 
@@ -132,6 +133,7 @@
         }
         [chatInfoArray addObject:chatInfoDictionary];
     }
+    [self.mainPage configureChatWith:chatInfoArray];
 }
 
 -(void)chatSelectedWithUserId:(NSString *)userId
