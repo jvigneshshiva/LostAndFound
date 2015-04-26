@@ -23,6 +23,7 @@
 @property (nonatomic) LFPhoneNumberRegistrationView *phoneNumberRegistrationPage;
 
 @property (nonatomic) NSArray *allCategoriesArray;
+@property (nonatomic) NSString *categoryId;
 
 @end
 
@@ -115,12 +116,18 @@
     self.phoneNumberRegistrationPage.verificationCode = verificationCode;
 }
 
--(void)fetchItemDataInfo
+-(void)fetchItemDataInfoForCategoryId:(NSString *)categoryId
 {
-    [self.serverHelper fetchItemDataInfo];
+    [self.serverHelper fetchItemDataInfoForCategoryId:categoryId];
 }
 
--(void)itemListReceived:(NSDictionary *)itemList
+-(void)fetchItemDataInfo
+{
+    [self fetchItemDataInfoForCategoryId:self.categoryId];
+}
+
+
+-(void)itemListReceived:(NSString *)str
 {
     
 }
@@ -150,6 +157,8 @@
     NSDictionary *dictionary = [str jsonValue];
     self.allCategoriesArray = dictionary[@"allCategoryItems"];
 }
+
+
 
 
 @end

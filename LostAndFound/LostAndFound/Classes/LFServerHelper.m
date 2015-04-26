@@ -53,7 +53,7 @@ typedef enum
             break;
             
         case ITEM_LIST_DATA_FETCH_URL_CONNECTION_TAG:
-            [self.serverHelperDelegate verificationCodeReceived:str];
+            [self.serverHelperDelegate itemListReceived:str];
 
             break;
             
@@ -165,9 +165,8 @@ typedef enum
     phoneNumberSubmissionURLConnection.tag = POSTDATA_SUBMISSION_URL_CONNECTION_TAG;
 }
 
--(void)fetchItemDataInfo
+-(void)fetchItemDataInfoForCategoryId:(NSString *)categoryId
 {
-    NSString *categoryId = nil;//hack
     NSMutableString *postParameter = [NSMutableString stringWithString: @"txType="];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"serviceRequest"]];
     [postParameter appendString:[NSString stringWithFormat:@"%@", @"&command="]];
